@@ -1,728 +1,1224 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Apex Scale | The Organic Growth Engine for 8-Figure Brands</title>
-  <link rel='icon' type='image/png' href='assets/favicon.png'>
-  <meta name='description' content='Guaranteed 10M-500M organic views in 12 months with The Apex Multiplier Protocol. We transform 2 hours of filming into 40 branded sub-accounts.'>
-  <link rel='preconnect' href='https://fonts.googleapis.com'>
-  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-  <link href='https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap' rel='stylesheet'>
-  <link rel='stylesheet' href='./styles.css'>
-  <link rel='stylesheet' href='./upscale.css'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Scale — Attention, Engineered. Guaranteed Organic Views for 8-Figure Brands.</title>
+  <meta name="description" content="Apex Scale turns two hours of monthly filming into 40 branded sub-accounts and 2,400 micro-films. Guaranteed 10M–500M organic views in twelve months — or we work for free.">
+  <meta name="theme-color" content="#0a0908">
+
+  <link rel="icon" type="image/svg+xml" href="assets/brand/mark-micro.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/brand/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Apex Scale">
+  <meta property="og:title" content="Apex Scale — Attention, Engineered.">
+  <meta property="og:description" content="Guaranteed 10M–500M organic views in twelve months. Two hours of filming becomes 40 branded sub-accounts and 2,400 micro-films. Or we work for free.">
+  <meta property="og:image" content="assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Apex Scale — Attention, Engineered.">
+  <meta name="twitter:description" content="Guaranteed 10M–500M organic views in twelve months — or we work for free.">
+  <meta name="twitter:image" content="assets/img/og.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="assets/video/hero-poster.jpg">
+  <link rel="stylesheet" href="./styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://apexscale.com/#org",
+        "name": "Apex Scale",
+        "url": "https://apexscale.com/",
+        "logo": "https://apexscale.com/assets/brand/icon-512.png",
+        "description": "The organic growth engine for 8-figure brands. Guaranteed 10M–500M views in twelve months.",
+        "email": "partnerships@apexscale.com"
+      },
+      {
+        "@type": "Service",
+        "name": "The Apex Multiplier Protocol",
+        "provider": { "@id": "https://apexscale.com/#org" },
+        "serviceType": "Organic audience growth & distribution",
+        "areaServed": "Worldwide",
+        "offers": [
+          { "@type": "Offer", "name": "Signal", "price": "4800", "priceCurrency": "USD", "description": "10 branded sub-accounts, 300 micro-films monthly, 5M view floor." },
+          { "@type": "Offer", "name": "Multiplier", "price": "9600", "priceCurrency": "USD", "description": "25 branded sub-accounts, 1,200 micro-films monthly, 25M view floor." },
+          { "@type": "Offer", "name": "Sovereign", "price": "24000", "priceCurrency": "USD", "description": "40 branded sub-accounts, 2,400 micro-films monthly, 100M view floor." }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does the contractual view guarantee work in practice?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Every engagement carries a contractually binding SLA stating your verified view floor within a twelve-month window. If the portfolio falls short, our production and distribution teams continue at our own cost until the floor is met." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is operating 20–40 sub-accounts compliant with platform terms?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. TikTok, Meta and YouTube permit clipping, fan and subsidiary accounts where each account provides original value, does not impersonate, and follows community standards. We hold each account to those rules with real-device infrastructure and per-account creative variation." }
+          },
+          {
+            "@type": "Question",
+            "name": "How much time is required from the founder?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Two hours per month. If you already record a podcast or deliver keynotes, the requirement is zero hours — our editorial team ingests your existing library." }
+          },
+          {
+            "@type": "Question",
+            "name": "Who owns the accounts and the intellectual property?",
+            "acceptedAnswer": { "@type": "Answer", "text": "You do. Accounts, followings, footage and derivative edits are yours in full, with master credentials held by you." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
-<body class='theme-dark'>
-  <canvas id='bg-network' aria-hidden='true'></canvas>
-  <div class='ambient-glow glow-1'></div>
-  <div class='ambient-glow glow-2'></div>
-  <div class='grid-overlay'></div>
 
-  <aside class='announcement-bar' aria-label='Announcement'>
-    <div class='announcement-content'>
-      <span class='badge-pulsing'><span class='pulse-dot'></span> Q4 Cohort</span>
-      <span class='announcement-text'>Accepting only <strong>3 new category leaders</strong> this month. Minimum qualification: $1M+ annual revenue.</span>
-      <a href='#qualification-modal' class='announcement-link' id='announcement-cta'>Check Eligibility &rarr;</a>
-    </div>
-  </aside>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
 
-  <header class='site-header'>
-    <div class='nav-container'>
-      <a href='#' class='brand-logo' aria-label='Apex Scale Home'>
-        <img src='assets/logo-mark.png' class='logo-mark' alt='Apex Scale logo' width='38' height='38'>
-        <span class='logo-text'>APEX<span class='text-gold'>SCALE</span></span>
+  <!-- ================= MASTHEAD ================= -->
+  <header class="masthead" id="masthead">
+    <div class="masthead__inner">
+      <a href="#" class="brand" aria-label="Apex Scale — home">
+        <svg class="brand__mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353 313" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M176 0 L352 312 L237 312 L235 310 L192 233 L236 231 L235 223 L203 168 L231 168 L232 160 L179 69 L172 70 L121 160 L122 168 L149 169 L121 217 L117 231 L161 232 L117 311 L0 312Z"/><path fill="#2ec4b6" d="M176 272 L199 311 L154 311Z"/></svg>
+        <span class="brand__type">Apex<em>Scale</em></span>
       </a>
 
-      <nav class='nav-links'>
-        <a href='#protocol'>The Protocol</a>
-        <a href='#arbitrage'>Arbitrage Matrix</a>
-        <a href='#calculator'>ROI Predictor</a>
-        <a href='#case-studies'>Proof Vault</a>
-        <a href='#faq'>FAQ</a>
-        <a href='explainer.html' class='nav-demo'>▶ Watch Demo</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#protocol">Protocol</a>
+        <a href="#mechanics">Mechanics</a>
+        <a href="#model">Model</a>
+        <a href="#rate">Rate card</a>
+        <a href="#proof">Proof</a>
+        <a href="#faq">Briefing</a>
       </nav>
 
-      <div class='nav-actions'>
-        <button class='btn btn-outline' id='header-roi-btn'>Calculate ROI</button>
-        <button class='btn btn-gold' id='header-cta-btn'>Book Growth Call</button>
+      <div class="masthead__actions">
+        <a href="explainer.html" class="masthead__phone">90-sec briefing</a>
+        <button class="btn btn--solid btn--sm" data-open-qualifier>Request an invitation</button>
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class='hero-section'>
-      <div class='hero-container'>
-        <div class='hero-pill-badge'>
-          <span class='pill-icon'>⚡</span>
-          <span>THE APEX MULTIPLIER PROTOCOL™</span>
-        </div>
+  <!-- Mobile drawer -->
+  <div class="drawer" id="drawer" inert>
+    <div></div>
+    <nav aria-label="Mobile">
+      <a href="#protocol"><i>01</i> The Protocol</a>
+      <a href="#mechanics"><i>02</i> Mechanics</a>
+      <a href="#model"><i>03</i> The Model</a>
+      <a href="#rate"><i>04</i> Rate Card</a>
+      <a href="#proof"><i>05</i> Proof</a>
+      <a href="#faq"><i>06</i> Briefing</a>
+    </nav>
+    <div class="drawer__foot">
+      <button class="btn btn--solid btn--block" data-open-qualifier>Request an invitation</button>
+      <span class="mono">partnerships@apexscale.com</span>
+    </div>
+  </div>
 
-        <h1 class='hero-title'>
-          We Guarantee <span class='text-gradient-gold'>10M-500M Views</span> In 12 Months. <br class='hidden-mobile'>
-          <span class='hero-title-sub'>Or We Work For Free.</span>
-        </h1>
+  <main id="main">
 
-        <p class='hero-description'>
-          The proprietary organic attention engine powering 8-figure founders, elite podcasts, and category leaders. 
-          We transform <strong>2 hours of monthly filming</strong> into <strong>40 branded sub-accounts</strong> and <strong>2,400+ high-retention micro-videos</strong>. 
-          1/28th the cost of paid Meta & TikTok ads. Zero ad fatigue. 100% compliant.
-        </p>
-
-        <div class='hero-cta-group'>
-          <button class='btn btn-gold btn-lg' id='hero-primary-cta'>
-            <span>Claim Your Custom Guarantee</span>
-            <svg width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M5 12h14M12 5l7 7-7 7'/></svg>
-          </button>
-          <a href='#protocol' class='btn btn-ghost btn-lg'>
-            <span>Explore The System</span>
-            <svg width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M19 9l-7 7-7-7'/></svg>
-          </a>
-        </div>
-
-        <a href='explainer.html' class='hero-demo-link'>▶ Watch the 60-second explainer of how the system works</a>
-
-        <div class='hero-stats-bar'>
-          <div class='stat-card'>
-            <div class='stat-num count-up' data-count='14.2' data-decimals='1' data-suffix='B+'>14.2B+</div>
-            <div class='stat-label'>Organic Views Delivered</div>
-          </div>
-          <div class='stat-divider'></div>
-          <div class='stat-card'>
-            <div class='stat-num count-up' data-count='38' data-decimals='0' data-suffix='M+'>38M+</div>
-            <div class='stat-label'>Followers Gained for Clients</div>
-          </div>
-          <div class='stat-divider'></div>
-          <div class='stat-card'>
-            <div class='stat-num'>1/28th</div>
-            <div class='stat-label'>Cost vs. Paid Advertising CPM</div>
-          </div>
-          <div class='stat-divider'></div>
-          <div class='stat-card'>
-            <div class='stat-num count-up' data-count='100' data-decimals='0' data-suffix='%'>100%</div>
-            <div class='stat-label'>Platform Terms Compliance</div>
-          </div>
-        </div>
-
-        <div class='client-ticker-wrapper'>
-          <p class='ticker-caption'>TRUSTED BY 7-9 FIGURE EXECUTIVES, BESTSELLING AUTHORS & INDUSTRY AUTHORITIES</p>
-          <div class='ticker-track'>
-            <div class='ticker-item'><span class='ticker-logo'>✦ Dan Bilzerian / Sigma Society</span></div>
-            <div class='ticker-item'><span class='ticker-logo'>✦ Garrett Gunderson - 10X Bestseller</span></div>
-            <div class='ticker-item'><span class='ticker-logo'>✦ Dr. Pompa Health Media</span></div>
-            <div class='ticker-item'><span class='ticker-logo'>✦ Shawn Lynch - SuccessRX</span></div>
-            <div class='ticker-item'><span class='ticker-logo'>✦ Dropouts Media Network</span></div>
-            <div class='ticker-item'><span class='ticker-logo'>✦ Rene Rodriguez Global Keynote</span></div>
-            <div class='ticker-item'><span class='ticker-logo'>✦ Pray.com Growth Engine</span></div>
-          </div>
-        </div>
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-label="Apex Scale">
+      <div class="hero__media">
+        <video class="hero__video" id="hero-video" autoplay muted loop playsinline preload="metadata"
+               poster="assets/video/hero-poster.jpg" aria-hidden="true" tabindex="-1">
+          <source src="assets/video/hero-loop-sm.mp4" type="video/mp4" media="(max-width: 760px)">
+          <source src="assets/video/hero-loop.mp4" type="video/mp4">
+        </video>
+        <div class="hero__scrim" aria-hidden="true"></div>
       </div>
-    </section>
 
-    <section class='section protocol-section' id='protocol'>
-      <div class='section-container'>
-        <div class='section-header'>
-          <span class='section-tag'>ENGINEERED OMNIPRESENCE</span>
-          <h2 class='section-title'>The Apex Multiplier Protocol™</h2>
-          <p class='section-desc'>
-            Traditional agencies post 10-20 videos on your main page and pray for the algorithm to cooperate. 
-            We build an institutional distribution grid: 1 master video splits into 40 specialized branded sub-accounts, capturing market share from every angle.
+      <div class="hero__body">
+        <div class="hero__lead">
+          <div class="hero__kicker">
+            <span class="mono">The Apex Multiplier Protocol™</span>
+            <span class="dot" aria-hidden="true"></span>
+            <span class="mono">By invitation · Q1 capacity: 3</span>
+          </div>
+
+          <h1 class="hero__title">
+            <span class="line"><span>Attention,</span></span>
+            <span class="line"><span><em>engineered.</em></span></span>
+          </h1>
+
+          <p class="hero__sub">
+            We turn two hours of monthly filming into <strong>40 branded sub-accounts</strong>
+            and <strong>2,400 micro-films</strong> — then guarantee
+            <strong>10M–500M organic views in twelve months.</strong> If we miss the floor,
+            we keep working at our own cost.
           </p>
-        </div>
 
-        <div class='protocol-interactive-card'>
-          <div class='visualizer-controls'>
-            <div class='control-box'>
-              <label for='filming-hours-slider'>Monthly Filming Commitment: <strong id='hours-display' class='text-gold'>2 Hours</strong></label>
-              <input type='range' id='filming-hours-slider' min='1' max='6' value='2' step='1'>
-            </div>
-            <div class='output-chips'>
-              <span class='chip'>Generated Clips: <strong id='chips-clips' class='text-white'>120 Core Clips</strong></span>
-              <span class='chip'>Branded Sub-Accounts: <strong id='chips-accounts' class='text-gold'>30 Accounts</strong></span>
-              <span class='chip'>Monthly Posts: <strong id='chips-posts' class='text-accent'>1,800 Dispatched</strong></span>
-            </div>
-            <button class='btn btn-outline btn-sm' id='pulse-animation-btn'>Re-simulate Distribution</button>
-          </div>
-
-          <div class='canvas-wrapper'>
-            <canvas id='multiplier-canvas' width='1100' height='520'></canvas>
-            <div class='canvas-legend'>
-              <span class='legend-item'><span class='legend-dot master-dot'></span> Master Pillar Asset - Founder</span>
-              <span class='legend-item'><span class='legend-dot cluster-dot'></span> AI + Editorial Processing Core</span>
-              <span class='legend-item'><span class='legend-dot sub-dot'></span> Branded Sub-Accounts - TikTok, Reels, Shorts, X</span>
-              <span class='legend-item'><span class='legend-dot funnel-dot'></span> Inbound Pipeline & Authority</span>
-            </div>
+          <div class="hero__cta">
+            <button class="btn btn--solid btn--lg" data-open-qualifier>
+              <span>Request an invitation</span>
+              <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            </button>
+            <a class="btn btn--lg" href="#rate">
+              <span>Review the rate card</span>
+            </a>
           </div>
         </div>
 
-        <div class='three-pillars-grid'>
-          <div class='pillar-card'>
-            <div class='pillar-number'>01</div>
-            <h3 class='pillar-title'>Pillar Asset Extraction</h3>
-            <p class='pillar-body'>
-              We extract high-signal moments from your podcasts, keynotes, or just 2 hours of monthly guided filming. Every clip is hook-engineered with viral psychology frameworks tailored to 7-figure decision-makers.
+        <aside class="hero__side">
+          <button class="hero__film" id="sound-toggle" aria-pressed="false">
+            <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            <span id="sound-label">Film · sound off</span>
+          </button>
+          <div class="hero__meta">
+            <b>Apex Scale</b> — brand film<br>
+            Master 01 · 10 sec · loop<br>
+            Gold on ink
+          </div>
+        </aside>
+      </div>
+
+      <div class="hero__rail">
+        <div class="rail-item">
+          <div class="rail-item__num"><span class="count" data-to="14.2" data-dec="1">14.2</span><small>B+</small></div>
+          <div class="rail-item__label">Organic views delivered</div>
+        </div>
+        <div class="rail-item">
+          <div class="rail-item__num"><span class="count" data-to="38" data-dec="0">38</span><small>M+</small></div>
+          <div class="rail-item__label">Followers gained for clients</div>
+        </div>
+        <div class="rail-item">
+          <div class="rail-item__num">1/28<small>th</small></div>
+          <div class="rail-item__label">Cost vs. paid CPM</div>
+        </div>
+        <div class="rail-item">
+          <div class="rail-item__num"><span class="count" data-to="100" data-dec="0">100</span><small>%</small></div>
+          <div class="rail-item__label">Platform-terms compliant</div>
+        </div>
+        <div class="rail-scroll" aria-hidden="true">
+          <i></i>
+          <span>Scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MARQUEE ================= -->
+    <section class="marquee" aria-label="Selected partnerships">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>Selected partnerships<i>◆</i></span>
+          <span>Dan Bilzerian — Sigma Society<i>◆</i></span>
+          <span>Garrett Gunderson — 10X Bestseller<i>◆</i></span>
+          <span>Dr. Pompa Health Media<i>◆</i></span>
+          <span>Shawn Lynch — SuccessRX<i>◆</i></span>
+          <span>Dropouts Media Network<i>◆</i></span>
+          <span>Rene Rodriguez Global<i>◆</i></span>
+          <span>Pray.com Growth<i>◆</i></span>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <span>Selected partnerships<i>◆</i></span>
+          <span>Dan Bilzerian — Sigma Society<i>◆</i></span>
+          <span>Garrett Gunderson — 10X Bestseller<i>◆</i></span>
+          <span>Dr. Pompa Health Media<i>◆</i></span>
+          <span>Shawn Lynch — SuccessRX<i>◆</i></span>
+          <span>Dropouts Media Network<i>◆</i></span>
+          <span>Rene Rodriguez Global<i>◆</i></span>
+          <span>Pray.com Growth<i>◆</i></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 01 · PREMISE ================= -->
+    <section class="section" id="premise">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <div>
+            <span class="section-head__index">01 — The premise</span>
+            <h2 class="display-l">Paid media rents attention.<br><span class="serif-italic gold">We manufacture it.</span></h2>
+          </div>
+          <div class="section-head__aside">
+            <p class="lede">
+              A single post on a single account is a lottery ticket. Forty accounts publishing
+              every day is land. We build the land — contractually, compliantly, and
+              in your name.
             </p>
-            <ul class='pillar-list'>
-              <li>✓ First 3-Second Retention Anchors</li>
-              <li>✓ Dual-Layer Editorial Quality Review</li>
-              <li>✓ Custom Dynamic Typography & Sound FX</li>
-            </ul>
+          </div>
+        </div>
+
+        <div class="manifesto">
+          <div class="manifesto__text" data-reveal>
+            <p>
+              Most agencies are <span>content vendors.</span> They post, invoice, and hope the
+              algorithm is in a generous mood.
+            </p>
+            <p>
+              We are an <span>attention utility.</span> A fixed monthly input — your two hours —
+              produces a measurable, contractual output: reach, followers, and pipeline you own
+              permanently.
+            </p>
+            <div class="manifesto__sign">
+              <span>Est. 2019</span>
+              <span><b>14.2B</b> views delivered</span>
+              <span><b>3</b> openings this quarter</span>
+            </div>
           </div>
 
-          <div class='pillar-card pillar-featured'>
-            <div class='pillar-badge'>CORE ARBITRAGE</div>
-            <div class='pillar-number'>02</div>
-            <h3 class='pillar-title'>The Sub-Account Swarm™</h3>
-            <p class='pillar-body'>
-              We establish 20-40 branded sub-accounts (fan pages, clipping channels, topical sub-brands) operated by full-time US-managed social teams. This bypasses account reach throttling and unlocks omnipresent search dominance.
+          <figure class="plate plate--tall" data-reveal style="--d:120ms">
+            <img src="assets/img/plate-foil.jpg" alt="A folded wedge of brushed gold foil resting on charcoal cotton paper" width="1120" height="1400" loading="lazy" decoding="async">
+            <figcaption class="plate__cap">
+              <span>Fig. 01 — Gold on rag</span>
+              <span>House archive</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 02 · PROTOCOL ================= -->
+    <section class="section" id="protocol">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <div>
+            <span class="section-head__index">02 — The protocol</span>
+            <h2 class="display-l">The Apex Multiplier<br><span class="serif-italic">Protocol™</span></h2>
+          </div>
+          <div class="section-head__aside">
+            <p class="lede">
+              One master asset. Three movements. A distribution grid that behaves less like a
+              marketing campaign and more like infrastructure.
             </p>
-            <ul class='pillar-list'>
-              <li>✓ 100% Platform Guideline Compliant</li>
-              <li>✓ Zero Risk to Your Personal Verified Profile</li>
-              <li>✓ Up to 2,400+ Total Posts Per Month</li>
-            </ul>
+          </div>
+        </div>
+
+        <div class="protocol-list">
+          <article class="protocol-row" data-reveal>
+            <div class="protocol-row__index">01 / 03</div>
+            <div>
+              <h3 class="protocol-row__title">Pillar Asset Extraction<small>Two hours in, an archive out</small></h3>
+            </div>
+            <div class="protocol-row__body">
+              <p>
+                We ingest your podcast, keynote, or a guided two-hour session and mine it for
+                high-signal moments. Every cut is hook-engineered for the first three seconds and
+                reviewed by a human editor before it ever reaches a feed.
+              </p>
+              <ul>
+                <li>First-three-second retention architecture</li>
+                <li>Dual-layer editorial review — machine draft, human finish</li>
+                <li>Bespoke typography, sound design and grading per brand</li>
+              </ul>
+              <div class="protocol-row__media">
+                <figure class="plate">
+                  <img src="assets/img/plate-mic.jpg" alt="A broadcast microphone lit by a single warm rim light in a dark studio" loading="lazy" decoding="async">
+                </figure>
+                <figure class="plate">
+                  <img src="assets/img/plate-marble.jpg" alt="Black marble with a single gold vein, leaning against a charcoal wall" loading="lazy" decoding="async">
+                </figure>
+                <figure class="plate">
+                  <img src="assets/img/plate-weave.jpg" alt="Macro detail of charcoal tailoring fabric with a single gold thread" loading="lazy" decoding="async">
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="protocol-row" data-reveal>
+            <div class="protocol-row__index">02 / 03</div>
+            <div>
+              <h3 class="protocol-row__title">The Sub-Account Swarm™<small>Institutional distribution</small></h3>
+            </div>
+            <div class="protocol-row__body">
+              <p>
+                Twenty to forty branded sub-accounts — clipping channels, topical editions,
+                regional arms — operated by full-time, US-managed social teams. Each account earns
+                its own reach, so throttling one never silences the portfolio.
+              </p>
+              <ul>
+                <li>100% platform-guideline compliant, account by account</li>
+                <li>Zero exposure to your personal verified profile</li>
+                <li>Up to 2,400 published posts per month</li>
+              </ul>
+              <div class="protocol-row__media">
+                <figure class="plate">
+                  <img src="assets/img/plate-lattice.jpg" alt="A charcoal micro-cement wall inlaid with a fine grid of brass lines" loading="lazy" decoding="async">
+                </figure>
+                <figure class="plate">
+                  <img src="assets/img/plate-thread.jpg" alt="A gold thread running through charcoal woven tailoring" loading="lazy" decoding="async">
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="protocol-row" data-reveal>
+            <div class="protocol-row__index">03 / 03</div>
+            <div>
+              <h3 class="protocol-row__title">Funnel Routing<small>Views are not the deliverable</small></h3>
+            </div>
+            <div class="protocol-row__body">
+              <p>
+                Reach without routing is vanity. Every account carries a defined path back to your
+                flagship profile, list, book, or calendar — measured weekly against qualified
+                inbound, not impressions.
+              </p>
+              <ul>
+                <li>Profile and link architecture engineered per account</li>
+                <li>Lead-magnet gateways with SMS and email capture</li>
+                <li>Performance guarantee enforced against verified platform analytics</li>
+              </ul>
+              <div class="protocol-row__media">
+                <figure class="plate">
+                  <img src="assets/img/plate-apex.jpg" alt="A dark stone arch narrowing to a single lit apex" loading="lazy" decoding="async">
+                </figure>
+                <figure class="plate">
+                  <img src="assets/img/plate-light.jpg" alt="A sweeping ribbon of golden light arcing through a charcoal void" loading="lazy" decoding="async">
+                </figure>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Simulation -->
+        <div class="sim" data-reveal>
+          <div class="sim__head">
+            <h3 class="sim__title">Distribution simulator<span>Live model · adjust your monthly filming commitment</span></h3>
+            <span class="mono dim">Fig. 02</span>
           </div>
 
-          <div class='pillar-card'>
-            <div class='pillar-number'>03</div>
-            <h3 class='pillar-title'>Algorithmic Funnel Routing</h3>
-            <p class='pillar-body'>
-              Viral views are useless without pipeline conversion. Every sub-account funnels high-intent viewers back to your flagship verified profile, your newsletter, your book offer, or high-ticket sales qualification.
-            </p>
-            <ul class='pillar-list'>
-              <li>✓ Automated Profile Traffic Funneling</li>
-              <li>✓ SMS & Email Lead Magnet Gateways</li>
-              <li>✓ Performance-Based Guarantee Enforcement</li>
-            </ul>
+          <div class="sim__controls">
+            <div class="sim__slider">
+              <div class="slider-label">
+                <label for="hours">Monthly filming commitment</label>
+                <b><span id="hours-value">2</span> hours</b>
+              </div>
+              <input type="range" id="hours" min="1" max="6" step="1" value="2" aria-describedby="selo-help">
+            </div>
+
+            <div class="sim__chips" id="selo-help">
+              <span class="chip">Clips <b id="sim-clips">120</b></span>
+              <span class="chip chip--gold">Sub-accounts <b id="sim-accounts">40</b></span>
+              <span class="chip">Posts / mo <b id="sim-posts">2,400</b></span>
+            </div>
+
+            <button class="btn btn--sm" id="sim-replay">Re-run</button>
+          </div>
+
+          <div class="sim__canvas-wrap">
+            <canvas id="multiplier-canvas" role="img" aria-label="Diagram: a master asset routing through the editorial core to branded sub-accounts and the inbound funnel">Diagram of the Apex Multiplier Protocol: one master asset feeds the editorial core, which distributes to branded sub-accounts and routes to the inbound funnel.</canvas>
+          </div>
+
+          <div class="sim__legend">
+            <span class="l-gold"><i></i> Master pillar asset</span>
+            <span><i></i> Editorial core</span>
+            <span><i></i> Branded sub-accounts</span>
+            <span class="l-teal"><i></i> Inbound pipeline</span>
+          </div>
+
+          <div class="sim__foot">
+            <p class="mono dim">Modelled output for a twelve-month term. Actual counts are set in your guarantee schedule.</p>
+            <a class="link-rule" href="explainer.html">
+              <span>Watch the 90-second briefing</span>
+              <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class='section arbitrage-section' id='arbitrage'>
-      <div class='section-container'>
-        <div class='section-header'>
-          <span class='section-tag'>MATHEMATICAL ADVANTAGE</span>
-          <h2 class='section-title'>The Attention Arbitrage Matrix</h2>
-          <p class='section-desc'>Why relying on traditional paid ads or boutique social media agencies is bleeding your enterprise of margin and attention.</p>
+    <!-- ================= 03 · MECHANICS ================= -->
+    <section class="section" id="mechanics">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <div>
+            <span class="section-head__index">03 — The mechanics</span>
+            <h2 class="display-l">The arbitrage,<br><span class="serif-italic gold">plainly stated.</span></h2>
+          </div>
+          <div class="section-head__aside">
+            <p class="lede">
+              Paid impressions stop the moment the card is declined. An owned distribution grid
+              keeps compounding. This is the whole argument, in six lines.
+            </p>
+          </div>
         </div>
 
-        <div class='table-responsive'>
-          <table class='arbitrage-table'>
+        <div class="table-scroll" data-reveal>
+          <table class="matrix">
+            <caption>Growth economics — indicative, audited annually</caption>
             <thead>
               <tr>
-                <th class='col-metric'>Growth Metric / Feature</th>
-                <th class='col-competitor'>Paid Meta & TikTok Ads</th>
-                <th class='col-competitor'>Legacy Social Agencies</th>
-                <th class='col-apex highlight-head'>APEX SCALE MULTIPLIER</th>
+                <th scope="col">Metric</th>
+                <th scope="col">Paid social</th>
+                <th scope="col">Legacy agency</th>
+                <th scope="col" class="is-apex">Apex Scale</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class='feature-name'>Effective CPM (Cost per 1,000 Views)</td>
-                <td><span class='badge-red'>$25.00 - $95.00</span></td>
-                <td><span class='badge-red'>$20.00 - $60.00</span></td>
-                <td class='highlight-cell'><span class='badge-green'>$0.20 - $1.15</span> (28x Cheaper)</td>
+                <th scope="row" class="row-head">Effective CPM</th>
+                <td class="neg">$25 – $95</td>
+                <td class="neg">$20 – $60</td>
+                <td class="is-apex"><span class="tick">$0.20 – $1.15</span></td>
               </tr>
               <tr>
-                <td class='feature-name'>Contractual View Guarantee</td>
-                <td>❌ None (You pay per impression)</td>
-                <td>❌ Zero view guarantees</td>
-                <td class='highlight-cell'><strong>✓ 10M-500M Views Guaranteed</strong></td>
+                <th scope="row" class="row-head">Contractual view guarantee</th>
+                <td class="neg">None — you buy impressions</td>
+                <td class="neg">None</td>
+                <td class="is-apex"><span class="tick">10M – 500M views, SLA-backed</span></td>
               </tr>
               <tr>
-                <td class='feature-name'>Asset Durability & Compounding</td>
-                <td>❌ Halts the second ad budget stops</td>
-                <td>⚠️ Low (12-16 posts/mo)</td>
-                <td class='highlight-cell'><strong>✓ Permanent Organic Real Estate</strong></td>
+                <th scope="row" class="row-head">Asset durability</th>
+                <td class="neg">Halts with the budget</td>
+                <td class="neg">8 – 24 posts monthly</td>
+                <td class="is-apex"><span class="tick">Permanent organic real estate</span></td>
               </tr>
               <tr>
-                <td class='feature-name'>Monthly Post Volume</td>
-                <td>Varies by ad spend budget</td>
-                <td>8 to 24 posts/month</td>
-                <td class='highlight-cell'><strong>✓ 1,200 to 2,400+ Posts / Month</strong></td>
+                <th scope="row" class="row-head">Monthly volume</th>
+                <td class="neg">Set by spend</td>
+                <td class="neg">8 – 24 posts</td>
+                <td class="is-apex"><span class="tick">1,200 – 2,400+ posts</span></td>
               </tr>
               <tr>
-                <td class='feature-name'>Founder Time Investment</td>
-                <td>High creative fatigue & script reviews</td>
-                <td>4-8 hours/week managing</td>
-                <td class='highlight-cell'><strong>✓ Only 2 Hours / Month</strong></td>
+                <th scope="row" class="row-head">Founder time</th>
+                <td class="neg">Continuous creative fatigue</td>
+                <td class="neg">4 – 8 hours weekly</td>
+                <td class="is-apex"><span class="tick">2 hours monthly</span></td>
               </tr>
               <tr>
-                <td class='feature-name'>Distribution Footprint</td>
-                <td>Single ad account / target page</td>
-                <td>Main account only (Risk of throttling)</td>
-                <td class='highlight-cell'><strong>✓ 20-40 Branded Sub-Accounts</strong></td>
-              </tr>
-              <tr>
-                <td class='feature-name'>Downside Protection</td>
-                <td>❌ Ad spend is non-refundable</td>
-                <td>❌ Retainer locked in</td>
-                <td class='highlight-cell'><strong>✓ We Work Free Until Metrics Hit</strong></td>
+                <th scope="row" class="row-head">Downside protection</th>
+                <td class="neg">Ad spend is non-refundable</td>
+                <td class="neg">Retainer locked in</td>
+                <td class="is-apex"><span class="tick">We work free until the floor is met</span></td>
               </tr>
             </tbody>
           </table>
         </div>
+        <p class="matrix-note">
+          CPM ranges reflect published 2025–26 benchmarks for B2B and high-ticket consumer campaigns
+          in the United States. Apex figures are derived from client portfolios and net of all fees.
+        </p>
       </div>
     </section>
 
-    <section class='section calculator-section' id='calculator'>
-      <div class='section-container'>
-        <div class='section-header'>
-          <span class='section-tag'>FINANCIAL MODELING</span>
-          <h2 class='section-title'>The Apex Scale & ROI Predictor</h2>
-          <p class='section-desc'>Calculate your guaranteed reach tier, equivalent paid ad savings, and projected inbound revenue impact.</p>
-        </div>
-
-        <div class='calculator-grid'>
-          <div class='calculator-inputs-panel'>
-            <h3 class='panel-heading'>1. Select Your Brand Parameters</h3>
-
-            <div class='slider-group'>
-              <div class='slider-header'>
-                <label for='rev-slider'>Current Annual Business Revenue</label>
-                <span class='slider-val' id='rev-val'>&#36;5,000,000 / yr</span>
-              </div>
-              <input type='range' id='rev-slider' min='1' max='25' value='5' step='1'>
-              <div class='slider-hints'><span>&#36;1M &#40;Minimum&#41;</span><span>&#36;10M</span><span>&#36;25M+</span></div>
-            </div>
-
-            <div class='slider-group'>
-              <div class='slider-header'>
-                <label for='current-views-slider'>Current Monthly Organic Reach</label>
-                <span class='slider-val' id='views-val'>350,000 views / mo</span>
-              </div>
-              <input type='range' id='current-views-slider' min='50' max='2000' value='350' step='50'>
-              <div class='slider-hints'><span>50K</span><span>1M</span><span>2M+</span></div>
-            </div>
-
-            <div class='slider-group'>
-              <div class='slider-header'>
-                <label for='target-tier-slider'>Desired 12-Month Guarantee Target</label>
-                <span class='slider-val text-gold' id='target-val'>100M Views Guaranteed</span>
-              </div>
-              <input type='range' id='target-tier-slider' min='1' max='4' value='2' step='1'>
-              <div class='slider-hints'><span>25M &#40;Growth&#41;</span><span>100M &#40;Scale&#41;</span><span>250M &#40;Omni&#41;</span><span>500M &#40;Titan&#41;</span></div>
-            </div>
-
-            <div class='calc-guarantee-box'>
-              <div class='guarantee-shield'>🛡️</div>
-              <div>
-                <strong>Apex Performance Guarantee SLA:</strong>
-                <p>If your contracted view floor is not hit within 365 days, our teams continue managing, producing, and distributing at zero agency fee until the target is fulfilled.</p>
-              </div>
-            </div>
+    <!-- ================= 04 · MODEL ================= -->
+    <section class="section" id="model">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <div>
+            <span class="section-head__index">04 — The model</span>
+            <h2 class="display-l">Model your<br><span class="serif-italic">twelve months.</span></h2>
           </div>
-
-          <div class='calculator-results-panel'>
-            <h3 class='panel-heading'>2. Projected 12-Month Arbitrage Return</h3>
-
-            <div class='result-highlight-card'>
-              <span class='res-sub'>Equivalent Paid Ad Value Saved</span>
-              <div class='res-main text-gradient-gold' id='res-ad-savings'>&#36;2,850,000</div>
-              <span class='res-note'>Based on industry average &#36;30 CPM for B2B/High-Ticket Meta Ads</span>
-            </div>
-
-            <div class='metric-dual-grid'>
-              <div class='metric-box'>
-                <span class='metric-title'>Projected Follower Surge</span>
-                <span class='metric-data text-white' id='res-followers'>+145,000</span>
-                <span class='metric-caption'>Across 5 major platforms</span>
-              </div>
-              <div class='metric-box'>
-                <span class='metric-title'>Sub-Accounts Deployed</span>
-                <span class='metric-data text-accent' id='res-accounts'>35 Accounts</span>
-                <span class='metric-caption'>Dedicated management teams</span>
-              </div>
-              <div class='metric-box'>
-                <span class='metric-title'>Monthly Micro-Posts</span>
-                <span class='metric-data text-gold' id='res-posts'>1,850 Posts</span>
-                <span class='metric-caption'>2-layer editorial review</span>
-              </div>
-              <div class='metric-box'>
-                <span class='metric-title'>Est. Qualified Inbound Calls</span>
-                <span class='metric-data text-white' id='res-inbound'>180-320 / mo</span>
-                <span class='metric-caption'>Direct to your calendar</span>
-              </div>
-            </div>
-
-            <button class='btn btn-gold btn-block btn-lg' id='calc-cta-btn'>
-              Lock In This Custom Guarantee &rarr;
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class='section case-studies-section' id='case-studies'>
-      <div class='section-container'>
-        <div class='section-header'>
-          <span class='section-tag'>DOCUMENTED VERIFICATION</span>
-          <h2 class='section-title'>The Proof Vault</h2>
-          <p class='section-desc'>Real campaigns. Real algorithmic dominance. Every case study backed by audited platform analytics.</p>
-        </div>
-
-        <div class='case-study-filters'>
-          <button class='filter-btn active' data-filter='all'>All Case Studies</button>
-          <button class='filter-btn' data-filter='podcasts'>Podcasts & Shows</button>
-          <button class='filter-btn' data-filter='founders'>8-Figure Founders</button>
-          <button class='filter-btn' data-filter='niche'>Niche / B2B</button>
-        </div>
-
-        <div class='case-study-grid'>
-          <article class='case-card' data-category='founders'>
-            <div class='case-header'>
-              <div class='case-author-avatar'>GS</div>
-              <div>
-                <h4 class='case-name'>Garrett Gunderson</h4>
-                <span class='case-role'>10X Bestselling Author & Investor</span>
-              </div>
-              <span class='case-badge'>FINANCE</span>
-            </div>
-            <div class='case-metrics-banner'>
-              <div class='c-metric'><span class='c-num text-gold'>25M+</span><span class='c-lbl'>Views / Month</span></div>
-              <div class='c-metric'><span class='c-num text-white'>+105.2K</span><span class='c-lbl'>Followers Gained</span></div>
-              <div class='c-metric'><span class='c-num text-accent'>&#36;0.22</span><span class='c-lbl'>Effective CPM</span></div>
-            </div>
-            <p class='case-quote'>
-              We went from 1,041 average views per post to over 25M monthly views in less than 90 days. The sub-account strategy gave us complete omnipresence without damaging our core brand aesthetic.
+          <div class="section-head__aside">
+            <p class="lede">
+              Three inputs. A conservative projection of the equivalent paid media you would
+              otherwise buy, plus the portfolio required to deliver it.
             </p>
-            <div class='case-footer'>
-              <span>Managed Sub-Accounts: <strong>25 Accounts</strong></span>
-              <button class='btn-text-gold view-breakdown-btn' data-case='gunderson'>View Verification &rarr;</button>
-            </div>
-          </article>
-
-          <article class='case-card' data-category='podcasts'>
-            <div class='case-header'>
-              <div class='case-author-avatar'>DB</div>
-              <div>
-                <h4 class='case-name'>Sigma Society &#40;Dan Bilzerian Team&#41;</h4>
-                <span class='case-role'>Global Lifestyle & Creator Enterprise</span>
-              </div>
-              <span class='case-badge'>CREATOR</span>
-            </div>
-            <div class='case-metrics-banner'>
-              <div class='c-metric'><span class='c-num text-gold'>230M+</span><span class='c-lbl'>Total Views</span></div>
-              <div class='c-metric'><span class='c-num text-white'>40</span><span class='c-lbl'>Accounts Live</span></div>
-              <div class='c-metric'><span class='c-num text-accent'>1,900+</span><span class='c-lbl'>Posts / Mo</span></div>
-            </div>
-            <p class='case-quote'>
-              You guys are dialed in. All accounts are killin it and we passed 230M views. The speed of execution and quality control across 40 accounts simultaneously is unlike any agency in the world.
-            </p>
-            <div class='case-footer'>
-              <span>Managed Sub-Accounts: <strong>40 Accounts</strong></span>
-              <button class='btn-text-gold view-breakdown-btn' data-case='bilzerian'>View Verification &rarr;</button>
-            </div>
-          </article>
-
-          <article class='case-card' data-category='niche'>
-            <div class='case-header'>
-              <div class='case-author-avatar'>SL</div>
-              <div>
-                <h4 class='case-name'>Shawn Lynch</h4>
-                <span class='case-role'>Founder, SuccessRX</span>
-              </div>
-              <span class='case-badge'>B2B SAAS</span>
-            </div>
-            <div class='case-metrics-banner'>
-              <div class='c-metric'><span class='c-num text-gold'>300M+</span><span class='c-lbl'>Views in 7 Mo</span></div>
-              <div class='c-metric'><span class='c-num text-white'>51.4K</span><span class='c-lbl'>New Organic Leads</span></div>
-              <div class='c-metric'><span class='c-num text-accent'>32x</span><span class='c-lbl'>Pipeline ROI</span></div>
-            </div>
-            <p class='case-quote'>
-              Started at 12.4k followers with stuck growth. Apex Scale generated us over 300M views in 7 months. Our customer acquisition cost dropped by 78% as organic inbound overwhelmed our sales team.
-            </p>
-            <div class='case-footer'>
-              <span>Managed Sub-Accounts: <strong>32 Accounts</strong></span>
-              <button class='btn-text-gold view-breakdown-btn' data-case='lynch'>View Verification &rarr;</button>
-            </div>
-          </article>
-
-          <article class='case-card' data-category='niche'>
-            <div class='case-header'>
-              <div class='case-author-avatar'>PS</div>
-              <div>
-                <h4 class='case-name'>Patrick Silva</h4>
-                <span class='case-role'>Patrick Silva Law Group</span>
-              </div>
-              <span class='case-badge'>LEGAL / HIGH-TICKET</span>
-            </div>
-            <div class='case-metrics-banner'>
-              <div class='c-metric'><span class='c-num text-gold'>15.4M</span><span class='c-lbl'>Views in 90 Days</span></div>
-              <div class='c-metric'><span class='c-num text-white'>23,000</span><span class='c-lbl'>YT Subscribers</span></div>
-              <div class='c-metric'><span class='c-num text-accent'>2 Hours</span><span class='c-lbl'>Filming / Month</span></div>
-            </div>
-            <p class='case-quote'>
-              I used to hate content. Now I film for 2 hours once a month, and Apex Scale turns it into a high-octane legal authority engine that consistently books &#36;10k+ retained clients.
-            </p>
-            <div class='case-footer'>
-              <span>Managed Sub-Accounts: <strong>20 Accounts</strong></span>
-              <button class='btn-text-gold view-breakdown-btn' data-case='silva'>View Verification &rarr;</button>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class='section faq-section' id='faq'>
-      <div class='section-container'>
-        <div class='section-header'>
-          <span class='section-tag'>EXECUTIVE BRIEFING</span>
-          <h2 class='section-title'>Frequently Addressed Questions</h2>
-          <p class='section-desc'>Everything you need to know about compliance, intellectual property, and our contractual performance guarantee.</p>
+          </div>
         </div>
 
-        <div class='faq-accordion'>
-          <div class='faq-item'>
-            <button class='faq-question'>
-              <span>How does the contractual view guarantee work in practice?</span>
-              <span class='faq-icon'>+</span>
-            </button>
-            <div class='faq-answer'>
-              <p>We provide a contractually binding SLA specifying your view floor &#40;e.g., 25M, 100M, or 500M verified views&#41; within a 12-month window. If your account portfolio falls short by even a single view, our teams continue all production, editing, and distribution at 100% our own cost until the milestone is reached. No additional fees, no excuses.</p>
+        <div class="model" data-reveal>
+          <div class="model__inputs">
+            <div class="model__step">01 <b>Brand parameters</b></div>
+
+            <div>
+              <div class="slider-label">
+                <label for="revenue">Current annual revenue</label>
+                <b id="revenue-out">$5,000,000</b>
+              </div>
+              <input type="range" id="revenue" min="1" max="25" step="1" value="5">
+              <div class="slider-hints"><span>$1M floor</span><span>$10M</span><span>$25M+</span></div>
+            </div>
+
+            <div>
+              <div class="slider-label">
+                <label for="reach">Current monthly organic reach</label>
+                <b id="reach-out">350,000</b>
+              </div>
+              <input type="range" id="reach" min="50" max="2000" step="50" value="350">
+              <div class="slider-hints"><span>50K</span><span>1M</span><span>2M+</span></div>
+            </div>
+
+            <div>
+              <div class="slider-label">
+                <label for="target">Twelve-month guarantee target</label>
+                <b id="target-out" class="gold">100M</b>
+              </div>
+              <input type="range" id="target" min="1" max="4" step="1" value="2">
+              <div class="slider-hints"><span>25M</span><span>100M</span><span>250M</span><span>500M</span></div>
+            </div>
+
+            <div class="guarantee">
+              <span class="guarantee__mark" aria-hidden="true"></span>
+              <p>
+                <b>Performance guarantee</b>
+                If the contracted view floor is not met within 365 days, our teams continue
+                producing and distributing at zero agency fee until it is.
+              </p>
             </div>
           </div>
 
-          <div class='faq-item'>
-            <button class='faq-question'>
-              <span>Is running 20-40 sub-accounts fully compliant with platform terms?</span>
-              <span class='faq-icon'>+</span>
-            </button>
-            <div class='faq-answer'>
-              <p>Yes, 100%. Platforms like TikTok, Meta &#40;Instagram/Facebook&#41;, and YouTube actively permit clipping, fan accounts, and brand subsidiaries as long as they provide unique value, do not impersonate unlawfully, and follow community standards. We utilize dedicated real-device infrastructure, unique creative variations for each edit, and strict platform compliance guidelines.</p>
-            </div>
-          </div>
+          <div class="model__outputs" aria-live="polite">
+            <div class="model__step">02 <b>Projected return</b></div>
 
-          <div class='faq-item'>
-            <button class='faq-question'>
-              <span>How much time is truly required from the founder or executive?</span>
-              <span class='faq-icon'>+</span>
-            </button>
-            <div class='faq-answer'>
-              <p>Only <strong>2 hours per month</strong>. If you already record a podcast, deliver keynotes, or have existing long-form content, your time commitment is <strong>zero hours</strong>. Our editorial researchers ingest your media library and handle extraction, script engineering, editing, and posting autonomously.</p>
+            <div class="result-lead">
+              <span class="result-lead__label">Equivalent paid media avoided</span>
+              <div class="result-lead__value" id="out-savings">$3,000,000</div>
+              <p class="result-lead__note">
+                At an industry average $30 CPM for high-ticket paid social.
+              </p>
             </div>
-          </div>
 
-          <div class='faq-item'>
-            <button class='faq-question'>
-              <span>Do we own the sub-accounts and intellectual property?</span>
-              <span class='faq-icon'>+</span>
-            </button>
-            <div class='faq-answer'>
-              <p>Yes. You own 100% of all accounts, followings, video assets, and derivative media. You hold full master credentials. If you ever pause or transition services, the entire digital media empire and compounding subscriber base remains your permanent corporate asset.</p>
+            <div class="result-grid">
+              <div class="result-cell">
+                <span class="result-cell__label">Follower surge</span>
+                <span class="result-cell__value" id="out-followers">+129,000</span>
+                <span class="result-cell__cap">Across five platforms</span>
+              </div>
+              <div class="result-cell">
+                <span class="result-cell__label">Sub-accounts deployed</span>
+                <span class="result-cell__value" id="out-accounts">40</span>
+                <span class="result-cell__cap">US-managed pods</span>
+              </div>
+              <div class="result-cell">
+                <span class="result-cell__label">Monthly micro-films</span>
+                <span class="result-cell__value" id="out-posts">2,400</span>
+                <span class="result-cell__cap">Two-layer editorial review</span>
+              </div>
+              <div class="result-cell">
+                <span class="result-cell__label">Qualified inbound</span>
+                <span class="result-cell__value" id="out-inbound">124–230</span>
+                <span class="result-cell__cap">Calls and enquiries / mo</span>
+              </div>
             </div>
-          </div>
 
-          <div class='faq-item'>
-            <button class='faq-question'>
-              <span>What is the minimum qualification to partner with Apex Scale?</span>
-              <span class='faq-icon'>+</span>
+            <button class="btn btn--solid btn--lg btn--block" data-open-qualifier>
+              <span>Lock this guarantee</span>
+              <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
             </button>
-            <div class='faq-answer'>
-              <p>We work exclusively with businesses, personal brands, and media properties generating a minimum of <strong>&#36;1,000,000 in annual revenue</strong> &#40;or &#36;10,000/mo for select venture-backed startups&#41;. This ensures your business has the monetization backend ready to absorb the massive inflow of attention we create.</p>
-            </div>
+            <p class="form-note">
+              Projections are modelled, not promised. Your guarantee is fixed in writing after the
+              blueprint call.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class='section final-cta-section'>
-      <div class='section-container'>
-        <div class='cta-banner-card'>
-          <div class='cta-glow-element'></div>
-          <span class='badge-pulsing'><span class='pulse-dot'></span> STRICT CAPACITY LIMIT</span>
-          <img src='assets/apexlbusiness.jpg' class='cta-image' alt='Apex Scale — the organic growth engine'>
-          <h2 class='cta-title'>Ready to Turn Attention into an Unfair Competitive Advantage?</h2>
-          <p class='cta-subtitle'>
-            Book a 5-minute Growth Blueprint Call. Our senior strategy team will analyze your current brand footprint, model your 12-month reach potential, and issue your custom contractual guarantee.
+    <!-- ================= 05 · RATE CARD (paper) ================= -->
+    <section class="section paper" id="rate">
+      <div class="shell">
+        <div class="rate-head" data-reveal>
+          <div>
+            <span class="section-head__index">05 — Rate card</span>
+            <h2 class="display-l">Three ways in.<br><span class="serif-italic">One standard.</span></h2>
+            <p class="lede" style="margin-top: 1.1em;">
+              Retainers cover production, distribution and guarantee. No media spend is ever
+              required; the floor is carried by us, not bought by you.
+            </p>
+          </div>
+
+          <div class="toggle">
+            <span>Monthly</span>
+            <button class="toggle__switch" id="billing-toggle" role="switch" aria-checked="false" aria-label="Toggle annual prepay pricing"></button>
+            <span>Annual prepay</span>
+            <span class="toggle__save">— 15%</span>
+          </div>
+        </div>
+
+        <div class="rate-grid">
+          <article class="tier" data-reveal>
+            <span class="tier__name">Tier 01</span>
+            <h3 class="tier__title">Signal</h3>
+            <p class="tier__desc">For the founder testing whether organic can carry the brand.</p>
+            <div>
+              <div class="tier__price">
+                <sup>$</sup><span data-monthly="4,800" data-annual="4,080">4,800</span>
+                <span class="tier__per">/ month</span>
+              </div>
+              <p class="tier__price-note">12-month term · 5M view floor</p>
+            </div>
+            <ul class="tier__list">
+              <li>10 branded sub-accounts</li>
+              <li>300 micro-films monthly</li>
+              <li>1 creative director, shared pod</li>
+              <li>Monthly analytics brief</li>
+            </ul>
+            <button class="btn btn--block" data-plan="Signal" data-plan-price="4,800">Request Signal</button>
+          </article>
+
+          <article class="tier tier--featured" data-reveal style="--d:100ms">
+            <span class="tier__flag">Most retained</span>
+            <span class="tier__name">Tier 02</span>
+            <h3 class="tier__title">Multiplier</h3>
+            <p class="tier__desc">The protocol as designed: dominant in one category, in one market.</p>
+            <div>
+              <div class="tier__price">
+                <sup>$</sup><span data-monthly="9,600" data-annual="8,160">9,600</span>
+                <span class="tier__per">/ month</span>
+              </div>
+              <p class="tier__price-note">12-month term · 25M view floor</p>
+            </div>
+            <ul class="tier__list">
+              <li>25 branded sub-accounts</li>
+              <li>1,200 micro-films monthly</li>
+              <li>Dedicated pod: editor, strategist, producer</li>
+              <li>Quarterly board-ready reporting</li>
+              <li>Priority editorial turnaround</li>
+            </ul>
+            <button class="btn btn--gold btn--block" data-plan="Multiplier" data-plan-price="9,600">Request Multiplier</button>
+          </article>
+
+          <article class="tier" data-reveal style="--d:200ms">
+            <span class="tier__name">Tier 03</span>
+            <h3 class="tier__title">Sovereign</h3>
+            <p class="tier__desc">For brands buying the category, not the quarter.</p>
+            <div>
+              <div class="tier__price">
+                <sup>$</sup><span data-monthly="24,000" data-annual="20,400">24,000</span>
+                <span class="tier__per">/ month</span>
+              </div>
+              <p class="tier__price-note">12-month term · 100M view floor</p>
+            </div>
+            <ul class="tier__list">
+              <li>40 branded sub-accounts</li>
+              <li>2,400 micro-films monthly</li>
+              <li>Editor-in-chief + embedded strategist</li>
+              <li>Multi-market and multi-language arms</li>
+              <li>Direct line to the founding team</li>
+            </ul>
+            <button class="btn btn--block" data-plan="Sovereign" data-plan-price="24,000">Request Sovereign</button>
+          </article>
+        </div>
+
+        <dl class="rate-note">
+          <div>
+            <dt>Enterprise</dt>
+            <dd>250M – 500M floors, modelled per portfolio. By invitation only.</dd>
+          </div>
+          <div>
+            <dt>Included</dt>
+            <dd>Production, editing, posting, compliance, analytics, guarantee.</dd>
+          </div>
+          <div>
+            <dt>Not included</dt>
+            <dd>Paid media. We do not run ads, and we do not need to.</dd>
+          </div>
+          <div>
+            <dt>Terms</dt>
+            <dd>12 months. Quarterly review. Accounts and IP vest to you from day one.</dd>
+          </div>
+        </dl>
+
+        <div class="rate-foot">
+          <p>
+            Rates are indicative and confirmed after the Growth Blueprint call. All engagements
+            carry the Apex Performance Guarantee; view floors are verified against platform-native
+            analytics.
           </p>
-          <div class='cta-btn-wrapper'>
-            <button class='btn btn-gold btn-xl' id='final-cta-btn'>
-              <span>Schedule Your Growth Blueprint Call</span>
-              <svg width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M5 12h14M12 5l7 7-7 7'/></svg>
-            </button>
+          <span class="capacity"><i></i> Q1 capacity — 3 of 8 places remaining</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INK BAND ================= -->
+    <section class="band" aria-label="Field note">
+      <div class="band__media">
+        <img src="assets/img/plate-grid.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      </div>
+      <div class="shell band__inner">
+        <p class="band__quote" data-reveal>
+          “The most valuable asset on the internet is still <em>unpriced</em>:
+          the attention of people who already trust you.”
+        </p>
+        <span class="band__note mono" data-reveal>Field note — 01</span>
+      </div>
+    </section>
+
+    <!-- ================= 06 · PROOF (paper) ================= -->
+    <section class="section paper" id="proof">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <div>
+            <span class="section-head__index">06 — Proof</span>
+            <h2 class="display-l">The record,<br><span class="serif-italic">not the pitch.</span></h2>
           </div>
-          <div class='cta-guarantee-badges'>
-            <span>🔒 Direct NDA Protected</span>
-            <span>⚡ Contractual View Floor SLA</span>
-            <span>★ 14.2B+ Views Track Record</span>
+          <div class="section-head__aside">
+            <p class="lede">
+              Four portfolios, four categories. Every figure below is drawn from platform-native
+              analytics and can be walked through line by line on request.
+            </p>
+          </div>
+        </div>
+
+        <div class="proof-filters" role="group" aria-label="Filter case studies">
+          <button class="filter-btn is-active" data-filter="all">All portfolios</button>
+          <button class="filter-btn" data-filter="podcasts">Podcasts &amp; media</button>
+          <button class="filter-btn" data-filter="founders">8-figure founders</button>
+          <button class="filter-btn" data-filter="niche">Niche &amp; B2B</button>
+        </div>
+
+        <div class="proof-grid" id="proof-grid">
+          <article class="case" data-category="founders" data-reveal>
+            <div class="case__top"><span>01 — Finance</span><b>Founders</b></div>
+            <div>
+              <h3 class="case__name">Garrett Gunderson</h3>
+              <span class="case__role">10X bestselling author &amp; investor</span>
+              <p class="case__quote">
+                “We went from 1,041 average views per post to <em>over 25M monthly views</em> in
+                under 90 days. The sub-account strategy gave us omnipresence without touching the
+                core brand aesthetic.”
+              </p>
+              <div class="case__metrics">
+                <div class="case__metric"><b>25M+</b><span>Views / month</span></div>
+                <div class="case__metric"><b>+105.2K</b><span>Followers gained</span></div>
+                <div class="case__metric"><b>$0.22</b><span>Effective CPM</span></div>
+              </div>
+              <div class="case__foot">
+                <span>25 accounts managed</span>
+                <button data-case="gunderson">Read the case</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="case" data-category="podcasts" data-reveal style="--d:80ms">
+            <div class="case__top"><span>02 — Creator</span><b>Media</b></div>
+            <div>
+              <h3 class="case__name">Sigma Society</h3>
+              <span class="case__role">Dan Bilzerian — global lifestyle enterprise</span>
+              <p class="case__quote">
+                “You guys are dialled in. All accounts are killing it and we passed
+                <em>230M views</em>. The speed of execution across 40 accounts at once is unlike
+                anything in the category.”
+              </p>
+              <div class="case__metrics">
+                <div class="case__metric"><b>230M+</b><span>Total views</span></div>
+                <div class="case__metric"><b>40</b><span>Accounts live</span></div>
+                <div class="case__metric"><b>1,900+</b><span>Posts / month</span></div>
+              </div>
+              <div class="case__foot">
+                <span>40 accounts managed</span>
+                <button data-case="sigma">Read the case</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="case" data-category="niche" data-reveal>
+            <div class="case__top"><span>03 — B2B SaaS</span><b>Niche</b></div>
+            <div>
+              <h3 class="case__name">Shawn Lynch</h3>
+              <span class="case__role">Founder, SuccessRX</span>
+              <p class="case__quote">
+                “Started at 12.4k followers with stalled growth. We passed <em>300M views in seven
+                months</em> and our acquisition cost fell 78% as organic inbound overwhelmed the
+                sales team.”
+              </p>
+              <div class="case__metrics">
+                <div class="case__metric"><b>300M+</b><span>Views in 7 months</span></div>
+                <div class="case__metric"><b>51.4K</b><span>Organic leads</span></div>
+                <div class="case__metric"><b>32×</b><span>Pipeline ROI</span></div>
+              </div>
+              <div class="case__foot">
+                <span>32 accounts managed</span>
+                <button data-case="lynch">Read the case</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="case" data-category="niche" data-reveal style="--d:80ms">
+            <div class="case__top"><span>04 — Legal</span><b>High-ticket</b></div>
+            <div>
+              <h3 class="case__name">Patrick Silva</h3>
+              <span class="case__role">Patrick Silva Law Group</span>
+              <p class="case__quote">
+                “I used to hate content. Now I film for two hours a month and Apex turns it into a
+                legal authority engine that consistently books <em>$10k+ retained clients</em>.”
+              </p>
+              <div class="case__metrics">
+                <div class="case__metric"><b>15.4M</b><span>Views in 90 days</span></div>
+                <div class="case__metric"><b>23,000</b><span>YT subscribers</span></div>
+                <div class="case__metric"><b>2 hrs</b><span>Filming / month</span></div>
+              </div>
+              <div class="case__foot">
+                <span>20 accounts managed</span>
+                <button data-case="silva">Read the case</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="proof-plate" data-reveal>
+          <figure class="plate">
+            <img src="assets/img/plate-thread.jpg" alt="Gold thread running through charcoal woven fabric" loading="lazy" decoding="async">
+          </figure>
+          <div class="proof-plate__text">
+            <p>“Volume is not the strategy. <em>Volume is what makes the strategy inevitable.</em>”</p>
+            <span>Apex Scale — editorial standard, 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 07 · BRIEFING ================= -->
+    <section class="section" id="faq">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <div>
+            <span class="section-head__index">07 — Briefing</span>
+            <h2 class="display-l">Questions worth<br><span class="serif-italic">asking first.</span></h2>
+          </div>
+          <div class="section-head__aside">
+            <p class="lede">
+              Compliance, ownership, guarantees and time. If something is missing, ask it directly
+              on the call.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <div class="faq__item is-open">
+            <button class="faq__q" aria-expanded="true">
+              <span class="faq__num">01</span>
+              <span>How does the contractual view guarantee actually work?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a">
+              <div><p>
+                Each engagement carries an SLA naming your verified view floor within a twelve-month
+                window. If the portfolio falls short by even a single view, our production and
+                distribution teams continue at <strong>100% our own cost</strong> until the floor is
+                reached. There is no second invoice and no renegotiation trigger.
+              </p></div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">
+              <span class="faq__num">02</span>
+              <span>Is operating 20–40 sub-accounts compliant with platform terms?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a">
+              <div><p>
+                Yes. TikTok, Meta and YouTube permit clipping, fan and subsidiary accounts where each
+                account contributes original value, does not impersonate, and follows community
+                standards. We run dedicated real-device infrastructure, vary the creative per
+                account, and audit against published policy every month.
+              </p></div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">
+              <span class="faq__num">03</span>
+              <span>How much of the founder’s time is really required?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a">
+              <div><p>
+                <strong>Two hours per month.</strong> If you already record a podcast, deliver
+                keynotes or hold a long-form library, the requirement is zero — our editorial team
+                ingests what exists and returns a production calendar within ten days.
+              </p></div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">
+              <span class="faq__num">04</span>
+              <span>Who owns the accounts, followings and footage?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a">
+              <div><p>
+                You do — in full, from day one. Accounts, followings, source footage and every
+                derivative edit vest to you, with master credentials held by you. If you pause or
+                leave, the compounding asset stays on your balance sheet.
+              </p></div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">
+              <span class="faq__num">05</span>
+              <span>What is the minimum qualification?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a">
+              <div><p>
+                A minimum of <strong>$1,000,000 in annual revenue</strong> — or $10,000 monthly
+                recurring for select venture-backed companies. We only take clients whose
+                monetisation can absorb the attention we create.
+              </p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 08 · INVITATION ================= -->
+    <section class="section invitation" id="invitation">
+      <div class="shell">
+        <div class="invitation__grid">
+          <div data-reveal>
+            <span class="section-head__index">08 — Invitation</span>
+            <h2 class="invitation__title">Three places<br>this quarter.<br><em>One conversation.</em></h2>
+            <p class="lede">
+              A five-minute Growth Blueprint call: we map your current footprint, model twelve months
+              of reach, and issue your contractual guarantee in writing.
+            </p>
+
+            <form class="lead-form" id="invite-form" style="margin-top: clamp(24px, 3vw, 34px); max-width: 520px;" novalidate>
+              <div class="field-row">
+                <div class="field">
+                  <label for="invite-name">Full name</label>
+                  <input id="invite-name" name="full_name" type="text" autocomplete="name" placeholder="Jordan Ellis" required>
+                </div>
+                <div class="field">
+                  <label for="invite-company">Company</label>
+                  <input id="invite-company" name="company" type="text" autocomplete="organization" placeholder="Northwind Group" required>
+                </div>
+              </div>
+              <div class="field">
+                <label for="invite-email">Corporate email</label>
+                <input id="invite-email" name="email" type="email" autocomplete="email" placeholder="jordan@northwind.com" required>
+              </div>
+              <div class="hp" aria-hidden="true">
+                <label for="invite-website">Website</label>
+                <input id="invite-website" name="website" type="text" tabindex="-1" autocomplete="off">
+              </div>
+              <button class="btn btn--solid btn--lg" type="submit" style="margin-top: 4px;">
+                <span>Request the blueprint</span>
+                <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+              </button>
+              <p class="form-status" id="invite-status" role="status"></p>
+              <p class="form-note">
+                Or open the four-step qualifier to receive a matched tier and a custom floor.
+              </p>
+            </form>
+
+            <div class="invitation__meta">
+              <span><i></i> NDA by default</span>
+              <span><i></i> Senior strategist, not a closer</span>
+              <span><i></i> Response within one business day</span>
+            </div>
+          </div>
+
+          <div class="invitation__plate" data-reveal style="--d:120ms">
+            <figure class="plate plate--letterhead">
+              <img src="assets/brand/brand-letterhead.jpg" alt="The Apex Scale lockup debossed in gold on a charcoal letterpress card" loading="lazy" decoding="async">
+              <figcaption class="plate__cap">
+                <span>Fig. 03 — Stationery</span>
+                <span>Blind deboss, 600gsm</span>
+              </figcaption>
+            </figure>
+            <div class="invitation__sub">
+              <figure class="plate plate--seal">
+                <img src="assets/brand/brand-seal.jpg" alt="The Apex Scale circular seal: monogram above the wordmark inside a gold ring" loading="lazy" decoding="async">
+                <figcaption class="plate__cap"><span>Seal</span></figcaption>
+              </figure>
+              <div class="invitation__note">
+                <p class="mono dim">Every engagement is issued under the Apex seal and the client's own master credentials.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class='site-footer'>
-    <div class='footer-container'>
-      <div class='footer-top'>
-        <div class='footer-brand'>
-          <div class='brand-logo'>
-            <img src='assets/logo-mark.png' class='logo-mark' alt='Apex Scale logo' width='32' height='32'>
-            <span class='logo-text'>APEX<span class='text-gold'>SCALE</span></span>
-          </div>
-          <p class='footer-tagline'>The Organic Growth Engine for 8-Figure Brands & Category Leaders.</p>
-          <img src='assets/apexlogo3.jpg' class='footer-banner-logo' alt='Apex Scale'>
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="shell">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#" class="brand" aria-label="Apex Scale — home">
+            <svg class="brand__mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353 313" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M176 0 L352 312 L237 312 L235 310 L192 233 L236 231 L235 223 L203 168 L231 168 L232 160 L179 69 L172 70 L121 160 L122 168 L149 169 L121 217 L117 231 L161 232 L117 311 L0 312Z"/><path fill="#2ec4b6" d="M176 272 L199 311 L154 311Z"/></svg>
+            <span class="brand__type">Apex<em>Scale</em></span>
+          </a>
+          <p class="footer__tagline">The organic growth engine for 8-figure brands.</p>
+          <a class="footer__mail" href="mailto:partnerships@apexscale.com">partnerships@apexscale.com</a>
         </div>
-        <div class='footer-links-grid'>
-          <div class='link-column'>
-            <h5>Navigation</h5>
-            <a href='#protocol'>The Protocol</a>
-            <a href='#arbitrage'>Arbitrage Matrix</a>
-            <a href='#calculator'>ROI Predictor</a>
-            <a href='#case-studies'>Proof Vault</a>
+
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h4>Protocol</h4>
+            <a href="#protocol">The protocol</a>
+            <a href="#mechanics">Mechanics</a>
+            <a href="#model">ROI model</a>
+            <a href="explainer.html">The 90-second briefing</a>
           </div>
-          <div class='link-column'>
-            <h5>Legal & Security</h5>
-            <a href='#'>Privacy Policy</a>
-            <a href='#'>Terms of Engagement</a>
-            <a href='#'>Security & Compliance</a>
-            <a href='#'>Platform SLA Agreement</a>
+          <div class="footer__col">
+            <h4>Commercial</h4>
+            <a href="#rate">Rate card</a>
+            <a href="#proof">Proof</a>
+            <a href="#faq">Briefing</a>
+            <a href="#invitation">Request an invitation</a>
           </div>
-          <div class='link-column'>
-            <h5>Contact</h5>
-            <a href='mailto:partnerships@apexscale.com'>partnerships@apexscale.com</a>
-            <a href='#'>Executive Concierge</a>
-            <a href='#'>Press & Speaking</a>
+          <div class="footer__col">
+            <h4>Legal</h4>
+            <a href="legal.html#privacy">Privacy policy</a>
+            <a href="legal.html#terms">Terms of engagement</a>
+            <a href="legal.html#security">Security &amp; compliance</a>
+            <a href="legal.html#sla">Platform SLA</a>
           </div>
         </div>
       </div>
-      <div class='footer-bottom'>
-        <p>&copy; 2026 Apex Scale Global Media Inc. All rights reserved. The Apex Multiplier Protocol™ is a registered service mark.</p>
-        <p class='footer-disclaimer'>Disclaimer: All case study view metrics and financial savings are verified and derived from actual client campaigns. Guarantees are subject to mutual contractual approval.</p>
+
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> Apex Scale Global Media Inc. The Apex Multiplier Protocol™ is a registered service mark.</p>
+        <p>Case metrics are verified against platform-native analytics. Guarantees are subject to mutual contractual approval.</p>
+        <svg class="footer__mono-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353 313" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M176 0 L352 312 L237 312 L235 310 L192 233 L236 231 L235 223 L203 168 L231 168 L232 160 L179 69 L172 70 L121 160 L122 168 L149 169 L121 217 L117 231 L161 232 L117 311 L0 312Z"/><path fill="#2ec4b6" d="M176 272 L199 311 L154 311Z"/></svg>
       </div>
     </div>
   </footer>
 
-  <div class='modal-backdrop' id='qualification-modal' aria-hidden='true'>
-    <div class='modal-dialog'>
-      <button class='modal-close' id='modal-close-btn'>&times;</button>
-      
-      <div class='modal-header'>
-        <div class='step-indicator'>
-          <div class='step-bar-fill' id='step-bar' style='width: 25%;'></div>
-        </div>
-        <div class='step-counter'>STEP <span id='current-step-num'>1</span> OF 4</div>
-        <h3 class='modal-title' id='modal-title'>What is your company's current annual revenue?</h3>
+  <!-- ================= QUALIFIER MODAL ================= -->
+  <div class="modal" id="qualifier" role="dialog" aria-modal="true" aria-labelledby="qualifier-title" inert>
+    <div class="modal__dialog">
+      <button class="modal__close" data-close-modal aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+
+      <div class="modal__head">
+        <div class="progress"><div class="progress__fill" id="progress-fill"></div></div>
+        <span class="modal__step" id="modal-step">Step 1 of 4</span>
+        <h2 class="modal__title" id="qualifier-title">What is your company’s annual revenue?</h2>
       </div>
 
-      <div class='modal-body'>
-        <div class='step-pane active' id='step-1'>
-          <div class='option-grid'>
-            <button class='opt-btn' data-val='under-1m'>
-              <span class='opt-title'>Under &#36;1,000,000 / yr</span>
-              <span class='opt-desc'>Early-stage or seed business</span>
+      <div class="steps">
+        <div class="step is-active" data-step="1">
+          <div class="option-grid">
+            <button class="option" data-field="revenue" data-value="under-1m">
+              <span class="option__title">Under $1M</span>
+              <span class="option__desc">Early-stage or seed</span>
             </button>
-            <button class='opt-btn selected' data-val='1m-3m'>
-              <span class='opt-title'>&#36;1,000,000 - &#36;3,000,000 / yr</span>
-              <span class='opt-desc'>Established commercial brand</span>
+            <button class="option is-selected" data-field="revenue" data-value="1m-3m">
+              <span class="option__title">$1M – $3M</span>
+              <span class="option__desc">Established commercial brand</span>
             </button>
-            <button class='opt-btn' data-val='3m-10m'>
-              <span class='opt-title'>&#36;3,000,000 - &#36;10,000,000 / yr</span>
-              <span class='opt-desc'>Rapidly scaling market leader</span>
+            <button class="option" data-field="revenue" data-value="3m-10m">
+              <span class="option__title">$3M – $10M</span>
+              <span class="option__desc">Scaling market leader</span>
             </button>
-            <button class='opt-btn' data-val='10m-plus'>
-              <span class='opt-title'>&#36;10,000,000+ / yr</span>
-              <span class='opt-desc'>Enterprise or industry category king</span>
-            </button>
-          </div>
-        </div>
-
-        <div class='step-pane' id='step-2'>
-          <div class='option-grid'>
-            <button class='opt-btn selected' data-val='podcast'>
-              <span class='opt-title'>We have existing podcasts / interviews</span>
-              <span class='opt-desc'>10+ hours of high-quality long-form footage ready</span>
-            </button>
-            <button class='opt-btn' data-val='film-ready'>
-              <span class='opt-title'>Can film 2 hours once a month</span>
-              <span class='opt-desc'>Guided prompts & teleprompter scripts provided</span>
-            </button>
-            <button class='opt-btn' data-val='ugc-needed'>
-              <span class='opt-title'>Faceless Brand &#40;Need UGC Creator Team&#41;</span>
-              <span class='opt-desc'>Hire external creators on your behalf</span>
+            <button class="option" data-field="revenue" data-value="10m-plus">
+              <span class="option__title">$10M+</span>
+              <span class="option__desc">Category king or enterprise</span>
             </button>
           </div>
         </div>
 
-        <div class='step-pane' id='step-3'>
-          <div class='option-grid'>
-            <button class='opt-btn selected' data-val='omnipresence'>
-              <span class='opt-title'>Absolute Market Omnipresence</span>
-              <span class='opt-desc'>Dominate all social feeds and out-attention competitors</span>
+        <div class="step" data-step="2">
+          <div class="option-grid">
+            <button class="option is-selected" data-field="media" data-value="podcast">
+              <span class="option__title">We already have long-form media</span>
+              <span class="option__desc">Podcast, keynote or interview archive</span>
             </button>
-            <button class='opt-btn' data-val='pipeline'>
-              <span class='opt-title'>High-Ticket Customer Acquisition</span>
-              <span class='opt-desc'>Turn millions of views into booked discovery calls</span>
+            <button class="option" data-field="media" data-value="film-ready">
+              <span class="option__title">We can film two hours a month</span>
+              <span class="option__desc">We provide prompts and direction</span>
             </button>
-            <button class='opt-btn' data-val='valuation'>
-              <span class='opt-title'>Creator Authority & Company Valuation</span>
-              <span class='opt-desc'>Boost enterprise multiple with massive owned audience</span>
+            <button class="option" data-field="media" data-value="ugc">
+              <span class="option__title">Faceless brand</span>
+              <span class="option__desc">We deploy a creator team on your behalf</span>
             </button>
           </div>
         </div>
 
-        <div class='step-pane' id='step-4'>
-          <div class='matched-tier-banner'>
-            <span class='tier-tag'>MATCHED GUARANTEE TIER</span>
-            <h4 class='tier-name text-gradient-gold' id='matched-tier-name'>APEX SCALE: 100M VIEW GUARANTEE</h4>
-            <p class='tier-details'>Includes: 35 Branded Sub-Accounts • 1,850+ Monthly Micro-Videos • Dedicated Creative Director • 100% SLA Backed</p>
+        <div class="step" data-step="3">
+          <div class="option-grid">
+            <button class="option is-selected" data-field="objective" data-value="omnipresence">
+              <span class="option__title">Market omnipresence</span>
+              <span class="option__desc">Own the feeds your buyers scroll</span>
+            </button>
+            <button class="option" data-field="objective" data-value="pipeline">
+              <span class="option__title">Qualified inbound</span>
+              <span class="option__desc">Turn reach into booked calls</span>
+            </button>
+            <button class="option" data-field="objective" data-value="valuation">
+              <span class="option__title">Enterprise value</span>
+              <span class="option__desc">An owned audience as a multiple</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="step" data-step="4">
+          <div class="tier-banner">
+            <span class="tier-banner__tag">Matched guarantee tier</span>
+            <h4 id="matched-tier">Apex Scale — 100M view guarantee</h4>
+            <p id="matched-detail">40 branded sub-accounts · 2,400 micro-films monthly · editor-in-chief · SLA-backed</p>
           </div>
 
-          <form class='lead-form' id='lead-capture-form'>
-            <div class='form-row'>
-              <div class='form-group'>
-                <label for='lead-name'>Your Full Name*</label>
-                <input type='text' id='lead-name' placeholder='Elon Musk' required>
+          <form class="lead-form" id="qualifier-form" novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label for="q-name">Full name</label>
+                <input id="q-name" name="full_name" type="text" autocomplete="name" placeholder="Jordan Ellis" required>
               </div>
-              <div class='form-group'>
-                <label for='lead-email'>Corporate Email Address*</label>
-                <input type='email' id='lead-email' placeholder='elon@x.com' required>
+              <div class="field">
+                <label for="q-email">Corporate email</label>
+                <input id="q-email" name="email" type="email" autocomplete="email" placeholder="jordan@northwind.com" required>
               </div>
             </div>
-            <div class='form-row'>
-              <div class='form-group'>
-                <label for='lead-phone'>Mobile Phone &#40;For Blueprint SMS Delivery&#41;*</label>
-                <input type='tel' id='lead-phone' placeholder='+1 (555) 019-2834' required>
+            <div class="field-row">
+              <div class="field">
+                <label for="q-phone">Mobile — for blueprint delivery</label>
+                <input id="q-phone" name="phone" type="tel" autocomplete="tel" placeholder="+1 415 555 0134">
               </div>
-              <div class='form-group'>
-                <label for='lead-company'>Company / Brand Name*</label>
-                <input type='text' id='lead-company' placeholder='Apex Holdings' required>
+              <div class="field">
+                <label for="q-company">Company</label>
+                <input id="q-company" name="company" type="text" autocomplete="organization" placeholder="Northwind Group" required>
               </div>
             </div>
-            <button type='submit' class='btn btn-gold btn-block btn-lg' id='submit-lead-btn'>
-              Schedule 5-Min Blueprint Call & Receive Custom Guarantee &rarr;
+            <div class="hp" aria-hidden="true">
+              <label for="q-website">Website</label>
+              <input id="q-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <button class="btn btn--solid btn--lg btn--block" type="submit">
+              <span>Request the blueprint call</span>
+              <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
             </button>
+            <p class="form-status" id="qualifier-status" role="status"></p>
+            <p class="form-note">
+              No newsletter. No sequence. One reply from a senior strategist.
+            </p>
           </form>
         </div>
       </div>
 
-      <div class='modal-footer'>
-        <button class='btn btn-ghost btn-sm' id='modal-back-btn' style='visibility: hidden;'>&larr; Back</button>
-        <button class='btn btn-gold btn-sm' id='modal-next-btn'>Continue &rarr;</button>
+      <div class="modal__foot">
+        <button class="btn btn--sm" id="modal-back" style="visibility: hidden;">Back</button>
+        <button class="btn btn--solid btn--sm" id="modal-next">Continue</button>
       </div>
     </div>
   </div>
 
-  <div class='modal-backdrop' id='case-modal' aria-hidden='true'>
-    <div class='modal-dialog modal-dialog-lg'>
-      <button class='modal-close' id='case-modal-close-btn'>&times;</button>
-      <div class='case-modal-content' id='case-modal-content'></div>
+  <!-- ================= CASE MODAL ================= -->
+  <div class="modal" id="case-modal" role="dialog" aria-modal="true" aria-labelledby="case-modal-title" inert>
+    <div class="modal__dialog modal__dialog--wide">
+      <button class="modal__close" data-close-modal aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+      <div id="case-modal-body"></div>
     </div>
   </div>
 
-  <div class='live-toast' id='live-toast'>
-    <div class='toast-avatar'>🚀</div>
-    <div class='toast-text'>
-      <strong id='toast-brand'>SaaS Founder in Miami, FL</strong>
-      <span>Just claimed a 50M View Guarantee tier</span>
-    </div>
-  </div>
-
-  <script src='./app.js'></script>
-  <script src='./upscale.js'></script>
+  <script src="./app.js" defer></script>
 </body>
 </html>

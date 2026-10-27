@@ -35,6 +35,7 @@
   function togglePlay() {
     playing = !playing;
     playBtn.textContent = playing ? '❚❚' : '▶';
+    playBtn.setAttribute('aria-label', playing ? 'Pause' : 'Play');
   }
 
   playBtn.addEventListener('click', togglePlay);
@@ -73,11 +74,11 @@
 
   // Swarm graph elements (scene 4)
   const platforms = [
-    { label: 'TikTok', color: '#FF2D55' },
-    { label: 'Reels', color: '#E4405F' },
-    { label: 'Shorts', color: '#FF4D4D' },
-    { label: 'X', color: '#E7E9EA' },
-    { label: 'LinkedIn', color: '#0A66C2' }
+    { label: 'TikTok', color: 'rgba(201,169,110,0.92)' },
+    { label: 'Reels', color: 'rgba(224,196,140,0.92)' },
+    { label: 'Shorts', color: 'rgba(201,169,110,0.72)' },
+    { label: 'X', color: 'rgba(242,238,230,0.82)' },
+    { label: 'LinkedIn', color: 'rgba(46,196,182,0.85)' }
   ];
   const subDots = Array.from({ length: 36 }, (_, i) => ({
     platform: i % platforms.length,
@@ -116,7 +117,7 @@
       ctx.beginPath();
       ctx.moveTo(cx, cy);
       ctx.lineTo(pt.x, pt.y);
-      ctx.strokeStyle = 'rgba(212,175,55,0.14)';
+      ctx.strokeStyle = 'rgba(201,169,110,0.16)';
       ctx.lineWidth = 1;
       ctx.stroke();
     });
@@ -126,16 +127,18 @@
       const p = platforms[i];
       const pulse = 1 + Math.sin(t * 2 + i) * 0.08;
       ctx.beginPath();
-      ctx.arc(pt.x, pt.y, 9 * pulse, 0, Math.PI * 2);
+      ctx.arc(pt.x, pt.y, 7 * pulse, 0, Math.PI * 2);
       ctx.fillStyle = p.color;
-      ctx.shadowColor = p.color;
-      ctx.shadowBlur = 18;
       ctx.fill();
-      ctx.shadowBlur = 0;
-      ctx.font = '600 10px "Space Grotesk", sans-serif';
-      ctx.fillStyle = 'rgba(255,255,255,0.75)';
+      ctx.beginPath();
+      ctx.arc(pt.x, pt.y, 13, 0, Math.PI * 2);
+      ctx.strokeStyle = 'rgba(242,238,230,0.16)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      ctx.font = '400 9px "DM Mono", ui-monospace, monospace';
+      ctx.fillStyle = 'rgba(242,238,230,0.52)';
       ctx.textAlign = 'center';
-      ctx.fillText(p.label, pt.x, pt.y + 24);
+      ctx.fillText(p.label.toUpperCase(), pt.x, pt.y + 28);
     });
 
     // sub-account dots
@@ -145,36 +148,36 @@
       const y = pt.y + Math.sin(t * 0.5 + d.seed) * d.dist * 0.2 + Math.sin(d.angle) * d.dist;
       ctx.beginPath();
       ctx.arc(x, y, d.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(212,175,55,0.5)';
+      ctx.fillStyle = 'rgba(201,169,110,0.42)';
       ctx.fill();
     });
 
     // central pillar
     const cp = 1 + Math.sin(t * 1.6) * 0.1;
     ctx.beginPath();
-    ctx.arc(cx, cy, 20 * cp, 0, Math.PI * 2);
-    const g = ctx.createRadialGradient(cx, cy, 2, cx, cy, 26);
-    g.addColorStop(0, '#FFF2A3');
-    g.addColorStop(0.5, '#D4AF37');
-    g.addColorStop(1, 'rgba(212,175,55,0)');
-    ctx.fillStyle = g;
-    ctx.shadowColor = '#D4AF37';
-    ctx.shadowBlur = 30;
+    ctx.arc(cx, cy, 9 * cp, 0, Math.PI * 2);
+    ctx.fillStyle = '#c9a96e';
     ctx.fill();
-    ctx.shadowBlur = 0;
+    ctx.beginPath();
+    ctx.arc(cx, cy, 22 * cp, 0, Math.PI * 2);
+    ctx.strokeStyle = 'rgba(201,169,110,0.4)';
+    ctx.lineWidth = 1;
+    ctx.stroke();
 
     // funnel node
     ctx.beginPath();
-    ctx.arc(cx, H * 0.86, 12, 0, Math.PI * 2);
-    ctx.fillStyle = '#10B981';
-    ctx.shadowColor = '#10B981';
-    ctx.shadowBlur = 16;
+    ctx.arc(cx, H * 0.86, 6, 0, Math.PI * 2);
+    ctx.fillStyle = '#2ec4b6';
     ctx.fill();
-    ctx.shadowBlur = 0;
-    ctx.font = '600 10px "Space Grotesk", sans-serif';
-    ctx.fillStyle = 'rgba(255,255,255,0.7)';
+    ctx.beginPath();
+    ctx.arc(cx, H * 0.86, 16, 0, Math.PI * 2);
+    ctx.strokeStyle = 'rgba(46,196,182,0.34)';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    ctx.font = '400 9px "DM Mono", ui-monospace, monospace';
+    ctx.fillStyle = 'rgba(242,238,230,0.5)';
     ctx.textAlign = 'center';
-    ctx.fillText('INBOUND PIPELINE', cx, H * 0.86 + 28);
+    ctx.fillText('INBOUND PIPELINE', cx, H * 0.86 + 34);
 
     // packets
     if (packets.length < 40) spawnPackets();
@@ -186,7 +189,7 @@
       const y = pk.y + (pk.ty - pk.y) * pk.p;
       ctx.beginPath();
       ctx.arc(x, y, 2.4, 0, Math.PI * 2);
-      ctx.fillStyle = pk.gold ? 'rgba(245,208,97,0.9)' : 'rgba(16,185,129,0.9)';
+      ctx.fillStyle = pk.gold ? 'rgba(224,196,140,0.92)' : 'rgba(46,196,182,0.9)';
       ctx.fill();
     }
   }
@@ -201,7 +204,7 @@
       const a = 0.18 + 0.18 * Math.sin(t + p.x * 12);
       ctx.beginPath();
       ctx.arc(p.x * W, p.y * H, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = p.gold ? 'rgba(212,175,55,' + a + ')' : 'rgba(16,185,129,' + a + ')';
+      ctx.fillStyle = p.gold ? 'rgba(201,169,110,' + a + ')' : 'rgba(46,196,182,' + a + ')';
       ctx.fill();
     });
     if (current === 3) drawSwarm(now);

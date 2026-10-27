@@ -1,4 +1,11 @@
 {
   "version": 2,
-  "framework": "other"
+  "builds": [
+    { "src": "api/*.js", "use": "@vercel/node" },
+    { "src": "*.{html,css,js,png,svg,ico,jpg,jpeg,webp}", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "handle": "filesystem" }
+  ]
 }

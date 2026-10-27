@@ -45,6 +45,7 @@ Last updated: 2026-10-27
 | Check | Result |
 |-------|--------|
 | jsdom interaction harness (49 assertions: simulator, ROI, toggle, filters, FAQ, modals, qualifier, reset, thanks, invitation, drawer, ids, anchors, alts) | ✅ 49/49, 0 runtime errors |
+| SVG mark rendered with `@resvg/resvg-js` (full, micro, bone-on-paper, 4× lockup) | ✅ silhouette, counterform and teal accent correct |
 | HTML validation — `html-validate` recommended | ✅ index/legal/explainer clean; only the intentional muted-autoplay hint |
 | CSS parse — `css-tree` | ✅ 0 errors (styles.css, explainer.css) |
 | Class audit (HTML classes vs CSS selectors) | ✅ no unstyled components; dead utilities trimmed |
@@ -65,9 +66,31 @@ Last updated: 2026-10-27
 5. **No self-serve checkout** — deliberately consultative. `data-plan` / `data-plan-price` are on each button if Stripe is added later.
 6. **`apexmp4.mp4` (10s source, 3.3 MB) still sits in the repo root.** Kept as the master; safe to delete once the encoders in `assets/video/` are final.
 
+## 3b. Session D — logo correction
+
+**Problem:** the header mark was a raster alpha mask extracted from `apexlogo.jpg`. Against the flat ink ground it read soft and slightly ragged, and the embossed slot details turned into blotches at 26px.
+
+**Fix:** the mark is now **vector**, traced from the client's own artwork (`assets/apexlogo.jpg`) and shipped as an inline SVG path so it inherits `currentColor`:
+
+- `assets/brand/mark.svg` — full fidelity (outer silhouette + inner tree counterform + two slot details + teal accent triangle), 20-point path, 515 bytes.
+- `assets/brand/mark-micro.svg` — **micro cut**: slots dropped, used below ~40px (favicon, manifest, header) so the shape stays legible.
+- `index.html` / `legal.html` / `explainer.html` — inline `<svg>` in the header and footer (3 instances in index, 1 each in the others). Gold by default, bone on hover. Aspect ratio locked to the intrinsic 353:313.
+- `app.js` — `MARK_SVG` constant renders the same mark in the qualifier thank-you state.
+- Icons regenerated from the vector (not the JPEG): `favicon-16/32/64`, `icon-192`, `icon-512`, `apple-touch-icon`. Favicons use the micro cut; app icons keep the full detail.
+- `og.jpg` rebuilt around the corrected lockup (APEX in bone / SCALE in gold, tagline beneath) over the brass-wall plate.
+- Wordmark tracking tightened from `0.34em` to `0.19em` to match the client's APEXSCALE lockup.
+
+**Client brand artifacts added** (`assets/source/` keeps the originals; `assets/brand/` holds web-weight derivatives):
+
+- `brand-letterhead.jpg` — the debossed card, now the primary figure in the invitation section (`Fig. 03 — Stationery`).
+- `brand-seal.jpg` — the circular seal, paired beneath it with a line of copy about credentials.
+- The page never reuses the same brand artifact twice, and no logo JPG is placed as a "logo" — the vector mark is the only brand mark in the UI.
+
+**Verification:** the SVG path was rasterised with `@resvg/resvg-js` (a real SVG engine) at 520px, at 32px, and in bone-on-paper to confirm the even-odd counterform and colour inheritance; the header lockup was composited at 4× to check mark-to-wordmark proportion.
+
 ## 4. Next concrete action
 
-1. Look at the site in a browser at desktop/tablet/mobile widths and confirm the hero film framing and type sizes.
+1. Look at the site in a browser at desktop/tablet/mobile widths and confirm the hero film framing, the lockup and type sizes.
 2. Set `DATABASE_URL` in `.env` → run `schema.sql` → submit a test lead → confirm the row.
 3. Replace placeholder rates and confirm the client case studies before public launch.
 

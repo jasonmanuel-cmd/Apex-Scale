@@ -28,7 +28,7 @@ Open `index.html` directly for the front end alone; the forms need the Node serv
 | `explainer.html` / `.css` / `.js` | The 90-second visual briefing (self-contained deck) |
 | `assets/video/` | `hero-loop.mp4` (20s seamless loop with audio), `hero-loop-sm.mp4` (mobile), `hero-poster.jpg` |
 | `assets/img/` | Editorial plates (foil, mic, marble, grid, thread, apex) + `og.jpg` social card |
-| `assets/brand/` | `monogram-mask.png` (CSS-maskable brand mark), app icons |
+| `assets/brand/` | `mark.svg` / `mark-micro.svg` (the brand mark as vector, inline-able), icon set, and the client's stationery + seal artifacts |
 | `server.js` | Express: static site (correct caching/MIME) + `POST /api/leads` |
 | `api/leads.js` · `api/health.js` | Vercel serverless equivalents |
 | `schema.sql` | Neon Postgres `leads` table, indexes, view |
@@ -44,7 +44,7 @@ The previous build leaned on the standard "AI dark SaaS" look — neon glows, gr
 - **Type** — Cormorant Garamond (display serif, real italics), Inter Tight (UI), DM Mono (labels, indices, prices).
 - **Structure** — numbered sections, hairline rules, a magazine-style two-column section head, a light "paper" section for the rate card and proof so the page breathes.
 - **Motion** — line-mask headline reveals, slow page-scroll fades, a single drifting film loop. Nothing bounces, nothing glows.
-- **Brand mark** — `assets/brand/monogram-mask.png` is the real logomark as an alpha mask, so it renders razor-sharp in gold, bone, or ink at any size, including the favicon.
+- **Brand mark** — `assets/brand/mark.svg` is the logomark traced from the client's own artwork into a 20-point SVG path. It ships inline so it inherits `currentColor` (gold by default, bone on hover) and stays sharp at every size. A `mark-micro.svg` cut drops the fine slot details for favicons and the 74px header, where they would otherwise mush. No raster logo is used anywhere in the UI.
 - **Texture** — a fixed film-grain overlay (SVG turbulence) at low opacity to kill the flat digital look.
 
 ### The hero film

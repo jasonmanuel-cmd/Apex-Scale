@@ -836,6 +836,7 @@
 
     const mark = document.createElement('div');
     mark.className = 'thanks__mark';
+    mark.innerHTML = MARK_SVG;
 
     const title = document.createElement('h3');
     title.textContent = 'Blueprint requested.';
@@ -1051,6 +1052,13 @@
   /* ----------------------------------------------------------------------
      14. Helpers
      ---------------------------------------------------------------------- */
+
+  // Brand mark as inline SVG so it inherits colour (micro cut: no slot details,
+  // which mush below ~40px).
+  const MARK_SVG =
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353 313" aria-hidden="true" focusable="false">' +
+    '<path fill="currentColor" fill-rule="evenodd" d="M176 0 L352 312 L237 312 L235 310 L192 233 L236 231 L235 223 L203 168 L231 168 L232 160 L179 69 L172 70 L121 160 L122 168 L149 169 L121 217 L117 231 L161 232 L117 311 L0 312Z"/>' +
+    '<path fill="#2ec4b6" d="M176 272 L199 311 L154 311Z"/></svg>';
   function validate(form) {
     let ok = true;
     $$('input[required]', form).forEach((input) => {

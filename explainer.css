@@ -82,15 +82,15 @@ body {
   text-decoration: none;
 }
 
-.ex-logo::before {
-  content: '';
-  width: 22px;
-  height: 22px;
-  background: var(--gold);
-  -webkit-mask: url('assets/brand/monogram-mask.png') center / contain no-repeat;
-  mask: url('assets/brand/monogram-mask.png') center / contain no-repeat;
+.ex-logo__mark {
+  width: 25px;
+  height: 22.2px;
   flex: none;
+  color: var(--gold);
+  transition: color 0.4s var(--ease);
 }
+
+.ex-logo:hover .ex-logo__mark { color: var(--bone); }
 
 .ex-logo span { color: var(--gold); margin-left: -0.28em; }
 

@@ -82,6 +82,17 @@ body {
   z-index: 1;
 }
 
+/* Full-page "living network" background — sits behind all content */
+#bg-network {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
 .text-gold { color: var(--gold-bright); }
 .text-accent { color: var(--accent-emerald); }
 .text-white { color: #FFFFFF; }

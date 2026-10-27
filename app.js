@@ -1,5 +1,6 @@
 // Apex Scale Interactive Application Engine
 document.addEventListener('DOMContentLoaded', () => {
+  initNetworkBackground();
   initMultiplierCanvas();
   initRoiPredictor();
   initCaseStudies();
@@ -7,6 +8,120 @@ document.addEventListener('DOMContentLoaded', () => {
   initQualificationModal();
   initLiveToasts();
 });
+
+// 0. Full-page "Living Network" background — drifting gold/emerald particles
+//    connected by faint lines. Sits behind all content (#bg-network).
+function initNetworkBackground() {
+  const canvas = document.getElementById('bg-network');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const GOLD = [212, 175, 55];        // #D4AF37
+  const GOLD_BRIGHT = [245, 208, 97]; // #F5D061
+  const EMERALD = [16, 185, 129];     // #10B981
+  const CYAN = [6, 182, 212];         // #06B6D4
+  const COLORS = [GOLD, GOLD_BRIGHT, EMERALD, CYAN];
+  const LINK_DIST = 140;
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  let width = 0, height = 0;
+  let particles = [];
+  let raf = null;
+
+  function makeParticle() {
+    return {
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.22,
+      vy: (Math.random() - 0.5) * 0.22,
+      r: 0.7 + Math.random() * 1.7,
+      color: COLORS[(Math.random() * COLORS.length) | 0],
+      tw: Math.random() * Math.PI * 2
+    };
+  }
+
+  function seed() {
+    const target = Math.max(28, Math.min(85, Math.floor((width * height) / 22000)));
+    particles = new Array(target).fill(0).map(makeParticle);
+  }
+
+  function resize() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    seed();
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+
+    // faint connecting lines
+    for (let i = 0; i < particles.length; i++) {
+      const a = particles[i];
+      for (let j = i + 1; j < particles.length; j++) {
+        const b = particles[j];
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < LINK_DIST) {
+          const t = 1 - dist / LINK_DIST;
+          ctx.strokeStyle = 'rgba(212, 175, 55, ' + (t * 0.13).toFixed(3) + ')';
+          ctx.lineWidth = 0.6;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    // particles
+    const t0 = performance.now() / 1200;
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < -12) p.x = width + 12; else if (p.x > width + 12) p.x = -12;
+      if (p.y < -12) p.y = height + 12; else if (p.y > height + 12) p.y = -12;
+
+      const twinkle = 0.6 + 0.4 * Math.sin(t0 + p.tw);
+      const c = p.color;
+      ctx.fillStyle = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + (0.55 * twinkle).toFixed(3) + ')';
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  function loop() {
+    if (document.hidden) return;
+    draw();
+    raf = requestAnimationFrame(loop);
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+
+  if (reducedMotion) {
+    draw(); // single static frame, no animation
+  } else {
+    raf = requestAnimationFrame(loop);
+  }
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      cancelAnimationFrame(raf);
+      raf = null;
+    } else if (!raf && !reducedMotion) {
+      raf = requestAnimationFrame(loop);
+    }
+  });
+}
 
 // 1. The Apex Multiplier Protocol Canvas Visualizer
 function initMultiplierCanvas() {

@@ -146,3 +146,29 @@
   transition: border-color 0.25s ease, color 0.25s ease;
 }
 .hero-demo-link:hover { border-color: var(--gold-bright); color: #FFF2A3; }
+
+/* ---------- Brand images ---------- */
+img.logo-mark {
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.35);
+}
+
+.cta-image {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  margin: 26px auto 0;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 20px 55px -22px rgba(0, 0, 0, 0.85);
+}
+
+.footer-banner-logo {
+  display: block;
+  max-width: 220px;
+  margin-top: 18px;
+  opacity: 0.92;
+}

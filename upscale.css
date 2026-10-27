@@ -1,0 +1,148 @@
+/* ==========================================================================
+   Apex Scale — Luxury Enhancement Layer (additive)
+   Loaded AFTER styles.css. Adds "expensive" motion & depth on top of the
+   existing design system. Non-breaking: every rule is an enhancement.
+   ========================================================================== */
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .magnetic, .glow-border::after, .text-gradient-gold, .hero-pill-badge,
+  .hero-title, .hero-description, .hero-cta-group, .hero-stats-bar, .client-ticker-wrapper,
+  .btn-gold::after, .nav-links a::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+  .reveal { opacity: 1 !important; }
+}
+
+/* ---------- Gold shimmer on gradient text ---------- */
+.text-gradient-gold {
+  background-size: 200% auto;
+  animation: goldShimmer 6s linear infinite;
+}
+@keyframes goldShimmer {
+  to { background-position: 200% center; }
+}
+
+/* ---------- Hero entrance (staggered on load) ---------- */
+.hero-pill-badge, .hero-title, .hero-description, .hero-cta-group,
+.hero-stats-bar, .client-ticker-wrapper {
+  animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero-title         { animation-delay: 0.08s; }
+.hero-description   { animation-delay: 0.16s; }
+.hero-cta-group     { animation-delay: 0.24s; }
+.hero-stats-bar     { animation-delay: 0.32s; }
+.client-ticker-wrapper { animation-delay: 0.40s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* ---------- Glowing gradient border (signature "expensive" detail) ---------- */
+.glow-border { position: relative; }
+.glow-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg,
+    rgba(212, 175, 55, 0) 0%,
+    rgba(212, 175, 55, 0.7) 22%,
+    rgba(16, 185, 129, 0.55) 55%,
+    rgba(6, 182, 212, 0.4) 80%,
+    rgba(212, 175, 55, 0) 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.4;
+  transition: opacity 0.4s ease;
+}
+.glow-border:hover::after { opacity: 1; }
+
+/* ---------- Deepened card hover lift ---------- */
+.pillar-card, .case-card, .metric-box, .result-highlight-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.pillar-card:hover, .case-card:hover, .metric-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 60px -32px rgba(0, 0, 0, 0.95),
+              0 0 0 1px var(--border-gold-glow),
+              0 0 44px -18px rgba(212, 175, 55, 0.5);
+}
+
+/* ---------- Button shine sweep ---------- */
+.btn-gold { position: relative; overflow: hidden; }
+.btn-gold::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -80%;
+  width: 50%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+.btn-gold:hover::after { left: 130%; }
+
+/* ---------- Magnetic buttons ---------- */
+.magnetic { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); will-change: transform; }
+
+/* ---------- Cursor spotlight (subtle) ---------- */
+.spotlight {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(620px circle at var(--mx, 50%) var(--my, 38%),
+    rgba(212, 175, 55, 0.07),
+    rgba(16, 185, 129, 0.04) 45%,
+    transparent 68%);
+}
+
+/* ---------- Nav link underline ---------- */
+.nav-links a { position: relative; }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -6px;
+  width: 0; height: 2px;
+  background: var(--gold-gradient);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-links a:hover::after { width: 100%; }
+
+/* ---------- Section header eyebrow refinement ---------- */
+.section-tag { letter-spacing: 0.18em; }
+
+/* ---------- Explainer entry points ---------- */
+.nav-demo { color: var(--gold-bright); font-weight: 700; }
+.hero-demo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  color: var(--gold-bright);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+  padding-bottom: 2px;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+.hero-demo-link:hover { border-color: var(--gold-bright); color: #FFF2A3; }

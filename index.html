@@ -9,6 +9,7 @@
   <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
   <link href='https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap' rel='stylesheet'>
   <link rel='stylesheet' href='./styles.css'>
+  <link rel='stylesheet' href='./upscale.css'>
 </head>
 <body class='theme-dark'>
   <div class='ambient-glow glow-1'></div>
@@ -52,6 +53,7 @@
         <a href='#calculator'>ROI Predictor</a>
         <a href='#case-studies'>Proof Vault</a>
         <a href='#faq'>FAQ</a>
+        <a href='explainer.html' class='nav-demo'>▶ Watch Demo</a>
       </nav>
 
       <div class='nav-actions'>
@@ -91,14 +93,16 @@
           </a>
         </div>
 
+        <a href='explainer.html' class='hero-demo-link'>▶ Watch the 60-second explainer of how the system works</a>
+
         <div class='hero-stats-bar'>
           <div class='stat-card'>
-            <div class='stat-num'>14.2B+</div>
+            <div class='stat-num count-up' data-count='14.2' data-decimals='1' data-suffix='B+'>14.2B+</div>
             <div class='stat-label'>Organic Views Delivered</div>
           </div>
           <div class='stat-divider'></div>
           <div class='stat-card'>
-            <div class='stat-num'>38M+</div>
+            <div class='stat-num count-up' data-count='38' data-decimals='0' data-suffix='M+'>38M+</div>
             <div class='stat-label'>Followers Gained for Clients</div>
           </div>
           <div class='stat-divider'></div>
@@ -108,7 +112,7 @@
           </div>
           <div class='stat-divider'></div>
           <div class='stat-card'>
-            <div class='stat-num'>100%</div>
+            <div class='stat-num count-up' data-count='100' data-decimals='0' data-suffix='%'>100%</div>
             <div class='stat-label'>Platform Terms Compliance</div>
           </div>
         </div>
@@ -729,5 +733,6 @@
   </div>
 
   <script src='./app.js'></script>
+  <script src='./upscale.js'></script>
 </body>
 </html>

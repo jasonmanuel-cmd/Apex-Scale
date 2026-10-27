@@ -1,0 +1,228 @@
+/* Apex Scale — Explainer (self-contained animated briefing) */
+:root {
+  --bg-base: #06080C;
+  --gold-primary: #D4AF37;
+  --gold-bright: #F5D061;
+  --gold-gradient: linear-gradient(135deg, #FFF2A3 0%, #F5D061 40%, #D4AF37 80%, #996515 100%);
+  --accent-emerald: #10B981;
+  --accent-cyan: #06B6D4;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --font-main: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { color-scheme: dark; }
+
+body {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---------- Top bar ---------- */
+.ex-top {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 32px;
+}
+.ex-logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+.ex-logo span { color: var(--gold-bright); }
+.ex-eyebrow {
+  font-size: 0.62rem;
+  letter-spacing: 0.24em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+/* ---------- Progress bar ---------- */
+.ex-progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: rgba(255,255,255,0.06);
+  z-index: 21;
+}
+.ex-progress-bar {
+  height: 100%;
+  width: 0;
+  background: var(--gold-gradient);
+  box-shadow: 0 0 14px rgba(212,175,55,0.6);
+}
+
+/* ---------- Stage ---------- */
+.ex-stage {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ex-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+  opacity: 0;
+  transform: translateY(30px);
+  pointer-events: none;
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.ex-scene.active {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.ex-kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent-emerald);
+  margin-bottom: 26px;
+}
+
+.ex-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 6vw, 4.6rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  max-width: 13ch;
+  margin: 0 auto 26px;
+}
+.ex-title .gold {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.ex-sub {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 44ch;
+  margin: 0 auto;
+}
+
+.ex-swarm-hint {
+  margin-top: 18px;
+  font-size: 0.6rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(212,175,55,0.7);
+}
+
+/* ---------- CTA buttons ---------- */
+.ex-cta { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-top: 34px; }
+.btn-gold, .btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 15px 28px;
+  border-radius: 9999px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s;
+}
+.btn-gold {
+  background: var(--gold-gradient);
+  color: #06080C;
+  box-shadow: 0 8px 30px -8px rgba(212,175,55,0.55);
+}
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 14px 40px -10px rgba(212,175,55,0.7); }
+.btn-ghost {
+  color: var(--text-primary);
+  border: 1px solid rgba(255,255,255,0.16);
+}
+.btn-ghost:hover { border-color: var(--gold-primary); }
+
+/* ---------- Dots ---------- */
+.ex-dots {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  gap: 10px;
+}
+.ex-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.2);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.ex-dot.active {
+  width: 26px;
+  border-radius: 9999px;
+  background: var(--gold-bright);
+  box-shadow: 0 0 12px rgba(212,175,55,0.6);
+}
+
+/* ---------- Controls ---------- */
+.ex-controls {
+  position: fixed;
+  bottom: 30px;
+  right: 32px;
+  z-index: 20;
+  display: flex;
+  gap: 8px;
+}
+.ex-controls button {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.ex-controls button:hover { border-color: var(--gold-primary); color: var(--gold-bright); }
+
+@media (max-width: 640px) {
+  .ex-top { padding: 18px 20px; }
+  .ex-eyebrow { display: none; }
+  .ex-controls { bottom: 26px; right: 18px; }
+  .ex-dots { bottom: 34px; }
+}

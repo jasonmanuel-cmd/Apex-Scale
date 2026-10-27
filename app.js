@@ -592,7 +592,38 @@ function initQualificationModal() {
       e.preventDefault();
       const name = document.getElementById('lead-name').value;
       const email = document.getElementById('lead-email').value;
+      const phone = document.getElementById('lead-phone').value;
       const company = document.getElementById('lead-company').value;
+
+      // --- CRM capture (Neon Postgres via /api/leads) ---
+      // Fire-and-forget: the success screen shows instantly; the lead is
+      // saved in the background. If the backend or DB is missing, it logs
+      // and the visitor still gets a normal thank-you.
+      (async () => {
+        try {
+          const selected = (sel) => {
+            const el = document.querySelector(sel + ' .opt-btn.selected');
+            return el ? el.getAttribute('data-val') : '';
+          };
+          const matchedTierEl = document.getElementById('matched-tier-name');
+          await fetch('/api/leads', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              full_name: name,
+              email: email,
+              phone: phone,
+              company: company,
+              revenue_tier: selected('#step-1'),
+              media_readiness: selected('#step-2'),
+              objective: selected('#step-3'),
+              matched_tier: matchedTierEl ? matchedTierEl.textContent : ''
+            })
+          });
+        } catch (err) {
+          console.warn('[lead] could not reach /api/leads:', err && err.message);
+        }
+      })();
 
       const modalBody = document.querySelector('.modal-body');
       const modalHeader = document.querySelector('.modal-header');

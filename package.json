@@ -1,0 +1,18 @@
+{
+  "name": "apex-scale",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Apex Scale — organic growth marketing site + Neon Postgres CRM lead capture",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "db:init": "node -e \"console.log('Run schema.sql in the Neon SQL Editor, or: psql ' + process.env.DATABASE_URL + ' -f schema.sql')\""
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.0",
+    "dotenv": "^18.0.9",
+    "express": "^4.22.3"
+  }
+}
